@@ -1,6 +1,22 @@
+:root {
+    --accent: #5ea9ff;
+    --dark: #080808;
+    --light: #e8e8e8;
+}
+
+
 * {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
 
+button {
+    padding: 5px 30px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.button-solid {
+    background: var(--accent);
+}
