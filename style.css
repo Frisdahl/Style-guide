@@ -11,6 +11,13 @@
     font-family: sans-serif;
 }
 
+p {
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--dark);
+}
+
 
 
 
@@ -55,8 +62,10 @@
   padding: 0px 0px;
 }
 
-.main h2 {
+.section-title {
     margin-top: 50px;
+    margin-bottom: 25px;
+    color: var(--accent);
 }
 
 
@@ -72,9 +81,10 @@
     height: 200px;
     width: 200px;
     position: relative;
-    box-shadow: 0 0 5px rgba(0,0,0,.1);
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
     display: inline-block;
-}
+    margin-right: 25px;
+}   
 
 .colorbox.accent {
     background: var(--accent);
@@ -94,7 +104,7 @@
     position: relative;
     top: 125px;
     box-sizing: border-box;
-    padding: 5px;
+    padding: 5px 5px 5px 10px;
 }
 
 .colorname h4 {
@@ -105,11 +115,18 @@
 .colorname p {
     font-size: 15px;
     text-transform: uppercase;
+    line-height: normal;
 }
 
 
 
 
+
+/* Typografi styling */
+
+#typografi p {
+    width: 60%;
+}
 
 
 
