@@ -1,5 +1,5 @@
 :root {
-    --accent: #5ea9ff;
+    --accent: #318ffc;
     --dark: #080808;
     --light: #e8e8e8;
 }
@@ -12,11 +12,30 @@
 }
 
 button {
-    padding: 5px 30px;
+    padding: 10px 40px;
     border-radius: 5px;
     border: 0;
+    font-weight: bold;
+    transition: .2s;
+    box-sizing: border-box;
 }
 
 .button-solid {
     background: var(--accent);
+    color: var(--light);
+}
+
+.button-solid:hover {
+    opacity: .8;
+}
+
+.button-border {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+.button-border:hover {
+    background: var(--accent);
+    color: var(--light);
 }
