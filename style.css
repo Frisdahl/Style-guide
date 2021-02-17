@@ -1,3 +1,10 @@
+:root {
+    --accent: #318ffc;
+    --dark: #080808;
+    --light: #e8e8e8;
+}
+
+
 * {
     margin: 0;
     padding: 0;
