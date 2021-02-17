@@ -13,6 +13,12 @@
 
 
 
+
+
+
+
+
+/* Navigation styling */
 .sidenav {
   height: 100%;
   width: 160px;
@@ -37,11 +43,73 @@
   color: #f1f1f1;
 }
 
+
+
+
+/* Main container styling */
+
 .main {
-  margin-left: 160px; /* Same as the width of the sidenav */
+  margin-left: 210px; /* Same as the width of the sidenav + 50px margin */
+    margin-top: 50px;
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 0px;
 }
+
+.main h2 {
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+/* Color Styling */
+
+.colorbox {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0,0,0,.1);
+    display: inline-block;
+}
+
+.colorbox.accent {
+    background: var(--accent);
+}
+
+.colorbox.light {
+    background: var(--light);
+}
+
+.colorbox.dark {
+    background: var(--dark);
+}
+
+.colorname {
+    height: 75px;
+    background: #FFFFFF;
+    position: relative;
+    top: 125px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.colorname h4 {
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+.colorname p {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+
+
+
 
 
 
