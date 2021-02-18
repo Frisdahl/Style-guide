@@ -76,6 +76,13 @@ body {
   color: var(--accent);
 }
 
+.sidenav img {
+    width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 
 
