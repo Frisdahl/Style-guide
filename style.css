@@ -148,7 +148,7 @@ body {
     width: 100%;
     bottom: 0;
     box-sizing: border-box;
-    padding: 10px 5px 5px 10px;
+    padding-top: 5px;
 }
 
 .colorname h4 {
