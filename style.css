@@ -1,7 +1,7 @@
 :root {
-    --accent: #318ffc;
-    --dark: #080808;
-    --light: #e8e8e8;
+    --accent: #e5af6e;
+    --dark: #0f1828;
+    --light: #f6f6f6;
 }
 
 
@@ -15,6 +15,10 @@ p {
     font-size: 15px;
     line-height: 25px;
     color: var(--dark);
+}
+
+body {
+    background: var(--light);
 }
 
 
@@ -32,7 +36,7 @@ p {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background: var(--dark);
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -41,12 +45,12 @@ p {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: var(--light);
   display: block;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: var(--accent);
 }
 
 
@@ -80,9 +84,11 @@ p {
     height: 200px;
     width: 200px;
     position: relative;
-    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    /*box-shadow: 0 0 5px rgba(0,0,0,.2);*/
+    border: 10px solid #FFF;
     display: inline-block;
     margin-right: 25px;
+    box-sizing: border-box;
 }   
 
 .colorbox.accent {
@@ -100,10 +106,11 @@ p {
 .colorname {
     height: 75px;
     background: #FFFFFF;
-    position: relative;
-    top: 125px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
     box-sizing: border-box;
-    padding: 5px 5px 5px 10px;
+    padding: 10px 5px 5px 10px;
 }
 
 .colorname h4 {
