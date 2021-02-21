@@ -163,6 +163,13 @@ body {
 
 #logo img {
     width: 250px;
+    display: block;
+    margin-bottom: 25px;
+    padding: 50px;
+}
+
+img.darkbg {
+    background: var(--dark);
 }
 
 
