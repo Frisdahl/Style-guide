@@ -5,6 +5,8 @@
     
     --dark: #0f1828;
     --light: #f6f6f6;
+    
+    --shadow: #D6D8DD;
 }
 
 ::selection {
@@ -228,3 +230,34 @@ button:hover {
 button:active {
     opacity: 1;
 }
+
+
+
+
+
+/* Grafik styling */
+
+.card {
+    width: 400px;
+    max-width: 400px;
+    padding: 15px;
+    box-shadow: 0 3px 6px var(--shadow);
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
