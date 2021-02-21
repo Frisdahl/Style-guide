@@ -5,8 +5,11 @@
     
     /* Dark colors */
     --surface: #243553;
+    
     --softdark: #516273;
+    
     --dark: #0f1828;
+    --dark10p: #E0E2E5;
     
     /* Dark colors */
     --light: #f6f6f6;
@@ -252,6 +255,7 @@ button:active {
     box-sizing: border-box;
     overflow: hidden;
     cursor: pointer;
+    position: relative;
 }
 
 .card-img {
@@ -339,6 +343,45 @@ button:active {
     width: 100%;
     margin-top: 20px;
 }
+
+
+
+.service-item {
+    height: 80px;
+    width: calc(100% + 30px);
+    position: relative;
+    margin: 0 -15px;
+    display: block;
+    border-top: 1px solid var(--dark10p);
+}
+
+.service-item:first-of-type {
+    margin-top: -15px;
+    border: 0;
+}
+
+.service-item input {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
