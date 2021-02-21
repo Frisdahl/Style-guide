@@ -1,11 +1,17 @@
 :root {
-    --accent: #e5af6e;
+    /* Dark colors */
+    --accent: #247B7B;
+    --darkaccent: #114343;
+    
+    /* Dark colors */
     --surface: #243553;
     --softdark: #516273;
-    
     --dark: #0f1828;
+    
+    /* Dark colors */
     --light: #f6f6f6;
     
+    /* Dark colors */
     --shadow: #D6D8DD;
 }
 
@@ -42,17 +48,17 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
     color: var(--dark);
-    font-size: 30px;
+    font-size: 32px;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 24px;
     color: var(--dark);
 }
 
 p, span {
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 16px;
+    line-height: 24px;
     color: var(--softdark);
 }
 
@@ -76,7 +82,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background: var(--dark);
+  background: var(--darkaccent);
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -209,7 +215,7 @@ button {
     font-family: "graphiksemibold";
     width: 300px;
     background: var(--dark);
-    font-size: 20px;
+    font-size: 16px;
     color: var(--light);
     border: 0;
     padding: 18px 0;
@@ -238,7 +244,7 @@ button:active {
 /* Grafik styling */
 
 .card {
-    width: 350px;
+    width: 340px;
     max-width: 350px;
     padding: 15px;
     box-shadow: 0 3px 6px var(--shadow);
@@ -264,9 +270,15 @@ button:active {
     top: 50%;
 }
 
+.card h2 {
+    margin-top: 10px;
+}
+
 .card-stars {
     height: 15px;
     position: relative;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .card-stars .star {
@@ -277,7 +289,6 @@ button:active {
 
 .card-stars span {
     float: left;
-    font-size: 14px;
     font-family: "graphikbold";
     color: var(--dark);
     position: absolute;
@@ -287,6 +298,7 @@ button:active {
 
 .card-distance {
     position: relative;
+    margin-bottom: 10px;
 }
 
 .card-distance img{
@@ -295,7 +307,6 @@ button:active {
 
 .card-distance span {
     float: left;
-    font-size: 14px;
     font-family: "graphikbold";
     color: var(--dark);
     position: absolute;
@@ -316,7 +327,6 @@ button:active {
 
 .card-prices span {
     color: var(--dark);
-    font-size: 15px;
     float: left;
     font-family: "graphiksemibold";
 }
@@ -327,7 +337,7 @@ button:active {
 
 .card button {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 
