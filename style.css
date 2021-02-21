@@ -2,18 +2,18 @@
     /* Dark colors */
     --accent: #247B7B;
     --darkaccent: #114343;
-    
+
     /* Dark colors */
     --surface: #243553;
-    
+
     --softdark: #516273;
-    
+
     --dark: #0f1828;
     --dark10p: #E0E2E5;
-    
+
     /* Dark colors */
     --light: #f6f6f6;
-    
+
     /* Dark colors */
     --shadow: #D6D8DD;
 }
@@ -154,7 +154,7 @@ body {
     display: inline-block;
     margin-right: 25px;
     box-sizing: border-box;
-}   
+}
 
 .colorbox.accent {
     background: var(--accent);
@@ -372,28 +372,46 @@ button:active {
   background: red;
 }
 
+li a {text-decoration : none;
+color : #F6F6F6;
+font-size: 14px;}
+
+
+nav {
+  width : 115px;
+  background: #0F1828;
+  margin : 40px;
+  border-radius: 10px;
+}
+
+span {
+  padding : 10px 10px;
+  background : #FFFFFF;
+  color : #0F1828;
+  font-size : 14px;
+  cursor : pointer;
+  display: block;
+  border-radius: 10px;
+  display:flex;
+}
+
+span::after {
+  margin-left: 20px;
+  right: 10%;
+  content: "▼";
+}
+
+.slide {
+  clear:both;
+  width:100%;
+  height:0px;
+  overflow: hidden;
+  text-align: center;
+  transition: height .4s ease;
+}
 
 
 
+#touch {position: absolute; opacity: 0; height: 0px;}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#touch:checked + .slide {height: 165px;}
