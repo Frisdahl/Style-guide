@@ -45,7 +45,12 @@
     font-family: 'graphik';
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'graphikbold'
 }
 
@@ -59,7 +64,8 @@ h2 {
     color: var(--dark);
 }
 
-p, span {
+p,
+span {
     font-size: 16px;
     line-height: 24px;
     color: var(--softdark);
@@ -79,27 +85,27 @@ body {
 
 /* Navigation styling */
 .sidenav {
-  height: 100%;
-  width: 160px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background: var(--darkaccent);
-  overflow-x: hidden;
-  padding-top: 20px;
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: var(--darkaccent);
+    overflow-x: hidden;
+    padding-top: 20px;
 }
 
 .sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: var(--light);
-  display: block;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--light);
+    display: block;
 }
 
 .sidenav a:hover {
-  color: var(--accent);
+    color: var(--accent);
 }
 
 .sidenav img {
@@ -115,10 +121,12 @@ body {
 /* Main container styling */
 
 .main {
-  margin-left: 210px; /* Same as the width of the sidenav + 50px margin */
+    margin-left: 210px;
+    /* Same as the width of the sidenav + 50px margin */
     margin-top: 50px;
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 0px;
+    font-size: 28px;
+    /* Increased text to enable scrolling */
+    padding: 0px 0px;
 }
 
 .section-title {
@@ -268,7 +276,7 @@ button:active {
 
 .card-img img {
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 100%;
     left: 50%;
     top: 50%;
@@ -305,7 +313,7 @@ button:active {
     margin-bottom: 10px;
 }
 
-.card-distance img{
+.card-distance img {
     width: 25px;
 }
 
@@ -369,49 +377,57 @@ button:active {
 
 
 :checked .service-item {
-  background: red;
+    background: red;
 }
 
-li a {text-decoration : none;
-color : #F6F6F6;
-font-size: 14px;}
+li a {
+    text-decoration: none;
+    color: #F6F6F6;
+    font-size: 14px;
+}
 
 
 .list-dropdown {
-  width : 115px;
-  background: #0F1828;
-  margin : 40px;
-  border-radius: 10px;
+    width: 115px;
+    background: #0F1828;
+    margin: 40px;
+    border-radius: 10px;
 }
 
-.span-text{
-  padding : 10px 10px;
-  background : #FFFFFF;
-  color : #0F1828;
-  font-size : 14px;
-  cursor : pointer;
-  display: block;
-  border-radius: 10px;
-  display:flex;
+.span-text {
+    padding: 10px 10px;
+    background: #FFFFFF;
+    color: #0F1828;
+    font-size: 14px;
+    cursor: pointer;
+    display: block;
+    border-radius: 10px;
+    display: flex;
 }
 
 .span-text::after {
-  margin-left: 20px;
-  right: 10%;
-  content: "▼";
+    margin-left: 20px;
+    right: 10%;
+    content: "▼";
 }
 
 .slide {
-  clear:both;
-  width:100%;
-  height:0px;
-  overflow: hidden;
-  text-align: center;
-  transition: height .4s ease;
+    clear: both;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height .4s ease;
 }
 
 
 
-#touch {position: absolute; opacity: 0; height: 0px;}
+#touch {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+}
 
-#touch:checked + .slide {height: 165px;}
+#touch:checked + .slide {
+    height: 165px;
+}
