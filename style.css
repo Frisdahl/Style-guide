@@ -173,6 +173,10 @@ img.darkbg {
 }
 
 
+#app-ikon img {
+     width: 100px;
+}
+
 
 
 
@@ -189,18 +193,6 @@ img.darkbg {
     display: inline-block;
     margin-right: 25px;
     box-sizing: border-box;
-}
-
-.colorbox.accent {
-    background: var(--accent);
-}
-
-.colorbox.light {
-    background: var(--light);
-}
-
-.colorbox.dark {
-    background: var(--dark);
 }
 
 .colorname {
@@ -223,6 +215,31 @@ img.darkbg {
     text-transform: uppercase;
     line-height: normal;
 }
+
+.colorbox.accent {
+    background: var(--accent);
+}
+
+.colorbox.darkaccent {
+    background: var(--darkaccent);
+}
+
+.colorbox.dark {
+    background: var(--dark);
+}
+
+.colorbox.surface {
+    background: var(--surface);
+}
+
+.colorbox.softdark {
+    background: var(--softdark);
+}
+
+.colorbox.light {
+    background: var(--light);
+}
+
 
 
 
