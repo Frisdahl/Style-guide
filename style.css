@@ -377,14 +377,14 @@ color : #F6F6F6;
 font-size: 14px;}
 
 
-nav {
+.list-dropdown {
   width : 115px;
   background: #0F1828;
   margin : 40px;
   border-radius: 10px;
 }
 
-span {
+.span-text{
   padding : 10px 10px;
   background : #FFFFFF;
   color : #0F1828;
@@ -395,7 +395,7 @@ span {
   display:flex;
 }
 
-span::after {
+.span-text::after {
   margin-left: 20px;
   right: 10%;
   content: "▼";
