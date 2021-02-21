@@ -38,6 +38,26 @@
     src: url(fonts/Graphik-Semibold.otf);
 }
 
+pre {
+	width: 50%;
+	padding: 0;
+	margin: 0;
+	overflow: auto;
+	overflow-y: hidden;
+	font-size: 12px;
+	line-height: 20px;
+	background: var(--dark);
+	border: 1px solid #777;
+    max-height: 300px;
+    overflow-y: scroll;
+    margin: 20px 0;
+}
+pre code {
+	padding: 10px;
+	color: var(--light);
+    font-family: monospace;
+}
+
 
 * {
     margin: 0;
@@ -354,6 +374,10 @@ button:active {
 
 
 
+.card.servicelist {
+    padding-bottom: 0;
+}
+
 .service-item {
     height: 80px;
     width: calc(100% + 30px);
@@ -380,6 +404,20 @@ button:active {
     background: red;
 }
 
+.service-item span {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 40px;
+    font-size: 14px;
+    font-family: "graphiksemibold"
+}
+
+.service-item span.price {
+    right: 15px;
+    left: inherit;
+    font-family: "graphik"
+}
 
 
 
@@ -437,8 +475,6 @@ li a {
     transition: height .4s ease;
 }
 
-
-
 #touch {
     position: absolute;
     opacity: 0;
@@ -448,3 +484,15 @@ li a {
 #touch:checked + .slide {
     height: 165px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
