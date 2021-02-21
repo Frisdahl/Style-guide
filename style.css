@@ -1,28 +1,10 @@
 :root {
     --accent: #e5af6e;
+    --surface: #243553;
+    --softdark: #516273;
+    
     --dark: #0f1828;
     --light: #f6f6f6;
-}
-
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'graphik';
-}
-
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'graphikbold'
-}
-
-p {
-    font-size: 15px;
-    line-height: 25px;
-    color: var(--dark);
-}
-
-body {
-    background: var(--light);
 }
 
 ::selection {
@@ -44,6 +26,39 @@ body {
     font-family: graphiksemibold;
     src: url(fonts/Graphik-Semibold.otf);
 }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'graphik';
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'graphikbold'
+}
+
+h1 {
+    color: var(--dark);
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 20px;
+    color: var(--dark);
+}
+
+p, span {
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--softdark);
+}
+
+body {
+    background: var(--light);
+}
+
+
 
 
 
@@ -99,6 +114,7 @@ body {
     margin-top: 50px;
     margin-bottom: 25px;
     color: var(--accent);
+    font-size: 35px;
 }
 
 
@@ -172,36 +188,43 @@ body {
     width: 60%;
 }
 
+#typografi span {
+    font-size: 15px;
+    line-height: 10px;
+    font-style: italic;
+    margin-top: -20px;
+}
+
+#typografi h2 {
+    margin-top: 20px;
+}
+
 
 
 /* Button Styling */
 
 button {
-    padding: 5px 30px;
-    padding: 10px 40px;
-    border-radius: 5px;
+    font-family: "graphiksemibold";
+    width: 300px;
+    background: var(--dark);
+    font-size: 20px;
+    color: var(--light);
     border: 0;
-    font-weight: bold;
-    transition: .2s;
-    box-sizing: border-box;
+    padding: 18px 0;
+    text-transform: uppercase;
+    border-radius: 10px;
+    transition: .1s;
+    cursor: pointer;
 }
 
-.button-solid {
-    background: var(--accent);
-    color: var(--light);
+button:focus {
+    outline: 0;
 }
 
-.button-solid:hover {
-    opacity: .8;
+button:hover {
+    opacity: .9;
 }
 
-.button-border {
-    background: transparent;
-    border: 2px solid var(--accent);
-    color: var(--accent);
-}
-
-.button-border:hover {
-    background: var(--accent);
-    color: var(--light);
+button:active {
+    opacity: 1;
 }
