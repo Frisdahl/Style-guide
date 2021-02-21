@@ -368,7 +368,9 @@ button:active {
 }
 
 
-
+:checked .service-item {
+  background: red;
+}
 
 
 
