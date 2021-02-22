@@ -62,7 +62,7 @@ h1 {
     text-align: left;
     position: absolute;
     width: 310px;;
-    top: 150px;
+    top: 125px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -99,7 +99,6 @@ body {
 section {
     width: 100%;
     min-height: 100vh;
-    position: relative;
     display: none;
     transition: .2s;
     z-index: 1;
@@ -152,8 +151,15 @@ section {
     width: 25%;
     position: relative;
     height: 100%;
-    background: red;
     float: left;
+}
+
+.nav-link img {
+    width: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 
@@ -176,6 +182,29 @@ input {
 
 input:active, input:focus {
     outline: 0;
+}
+
+.searchbar {
+    position: relative;
+    top: 150px;
+    margin: 0 auto;
+}
+
+.searchbar-overlay {
+    width: 46px;
+    height: 48px;
+    position: absolute;
+    top: 150px;
+    right: 0;
+    transform: translateX(-50%);    
+}
+
+.searchbar-overlay img {
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    right: 15px;
 }
 
 
@@ -445,6 +474,54 @@ button:active {
 
 /* Home Screen Styling */
 
-#home-screen {
-    
+#home-screen .card {
+    height: 200px;
+    width: 300px;
+    margin: 0 auto 25px;
 }
+
+#home-screen .card:first-of-type {
+    margin-top: 250px;
+}
+
+#home-screen .card h3 {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+#home-screen .card .arrow {
+    height: 16px;
+    position: absolute;
+    bottom: 18px;
+    right: 15px;
+    transform: translateX(-100%)
+}
+
+#home-screen .card .background-image {
+    margin: -15px -15px;
+    width: calc(100% + 30px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: .7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

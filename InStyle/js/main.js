@@ -3,6 +3,7 @@
 var loadInScreen = document.getElementById("load-in");
 var loginScreen = document.getElementById("login");
 var homeScreen = document.getElementById("home-screen");
+var search = document.getElementById("search");
 
 var headerLogo = document.getElementById("header-logo")
 
@@ -35,6 +36,8 @@ setTimeout(function () {
 /* Delay tilrettes til sidst */
 
 
+
+/* Login */
 function login() {
     
     var username = document.getElementById("login-username").value;
@@ -60,13 +63,34 @@ function test() {
 
 
 
-function goToHome() {
 
-    console.log(this);
-    var parentOfButton = this.parentElement.nodeName;
+/* Removes currently active section class from current */
+function removeActive() {
+    var currentActive = document.querySelector(".active-section");
+
+    console.log(currentActive);
     
-    console.log(parentOfButton);
+    currentActive.classList.remove("active-section");
+}
 
+
+
+
+/* Returns user to homescreen */
+function goToHome() {
+    
+    removeActive();
+    
+    homeScreen.classList.add("active-section");
+    
+}
+
+function goToSearch() {
+    
+    removeActive();
+    
+    search.classList.add("active-section");
+    
 }
 
 

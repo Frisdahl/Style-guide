@@ -27,20 +27,20 @@
     
     <nav id="navigation">
     
-        <div id="nav-home" onclick="console.log('Home')" class="nav-link">
-            <img>
+        <div id="nav-home" onclick="goToHome()" class="nav-link">
+            <img src="img/icon-home.png">
         </div>
         
         <div id="nav-appointments" onclick="console.log('Appointments')" class="nav-link">
-            <img>
+            <img src="img/icon-calendar.png">
         </div>
         
         <div id="nav-favorites" onclick="console.log('Favorites')" class="nav-link">
-            <img>
+            <img src="img/icon-star.png">
         </div>
         
         <div id="nav-profile" onclick="console.log('Profile')" class="nav-link">
-            <img>
+            <img src="img/icon-user.png">
         </div>
         
     </nav>
@@ -89,17 +89,30 @@
         
         <h1>Velkommen tilbage<br><span id="welcome-name"></span></h1>
         
-        <div class="card">
-
-            <h3>Indtast telefonnummer</h3>
-
+        <div class="card" onclick="goToSearch()">
             
+            <img class="background-image" src="img/hairdresser-1.png">
+
+            <h3>Se frisører</h3>
+            <img class="arrow" src="img/arrow-right.png">
 
         </div>
 
     </section>
-
-    <section id="home-screen"></section>
+    
+    
+    
+    
+    
+    
+    <section id="search">
+    
+        <input class="searchbar">
+        <div class="searchbar-overlay">
+            <img src="img/icon-search.png">
+        </div>
+        
+    </section>
 
 
 
