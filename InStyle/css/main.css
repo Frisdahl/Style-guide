@@ -1,0 +1,149 @@
+:root {
+    /* Dark colors */
+    --accent: #247B7B;
+    --darkaccent: #114343;
+
+    /* Dark colors */
+    --surface: #243553;
+
+    --softdark: #516273;
+
+    --dark: #0f1828;
+    --dark10p: #E0E2E5;
+
+    /* Dark colors */
+    --light: #f6f6f6;
+
+    /* Dark colors */
+    --shadow: #D6D8DD;
+}
+
+::selection {
+    background: var(--accent);
+    color: var(--light);
+}
+
+@font-face {
+    font-family: graphik;
+    src: url(fonts/Graphik-Regular.otf);
+}
+
+@font-face {
+    font-family: graphikbold;
+    src: url(fonts/Graphik-Bold.otf);
+}
+
+@font-face {
+    font-family: graphiksemibold;
+    src: url(fonts/Graphik-Semibold.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'graphik';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'graphikbold'
+}
+
+h1 {
+    color: var(--dark);
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+    color: var(--dark);
+}
+
+p,
+span {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--softdark);
+}
+
+body {
+    background: var(--light);
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: none;
+}
+
+.active-section {
+    display: block;
+}
+
+
+
+
+/* Button Styling */
+
+button {
+    font-family: "graphiksemibold";
+    width: 300px;
+    background: var(--dark);
+    font-size: 16px;
+    color: var(--light);
+    border: 0;
+    padding: 18px 0;
+    text-transform: uppercase;
+    border-radius: 10px;
+    transition: .1s;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 0;
+}
+
+button:hover {
+    opacity: .9;
+}
+
+button:active {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+/* Load In Styling */
+
+#load-in {
+    height: 100vh;
+}
+
+#load-in img {
+    position: absolute;
+    width: 200px;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+
+
+
+
+
+
+/* Home Screen Styling */
+
+#home-screen {
+    background: var(--dark);
+}
