@@ -2,6 +2,9 @@
 <html>
 
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:300,400,700'>
+
     <title>TinyTools Style Guide</title>
 
     <link rel="stylesheet" href="style.css">
@@ -11,6 +14,13 @@
 </head>
 
 <body>
+
+
+  <div class="calendar"></div>
+  <script src='https://npmcdn.com/react@15.3.0/dist/react.min.js'></script>
+  <script src='https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js'></script>
+  <script src="index.js"></script>
 
 
     <div class="sidenav">
@@ -32,6 +42,8 @@
         <header>
             <h1>TinyTools Style Site</h1>
             <h2>InStyle</h2>
+
+
         </header>
 
         <section id="logo">
@@ -48,7 +60,7 @@
         <section id="app-ikon">
 
             <h2 class="section-title">App ikon</h2>
-            
+
             <img src="img/app-icon.png">
 
         </section>
@@ -64,7 +76,7 @@
                     <p>rgba(49,243,252,1)</p>
                 </div>
             </div>
-            
+
             <div class="colorbox darkaccent">
                 <div class="colorname">
                     <h4>Dark Accent</h4>
@@ -72,7 +84,7 @@
                     <p>rgba(49,243,252,1)</p>
                 </div>
             </div>
-            
+
             <div class="colorbox dark">
                 <div class="colorname">
                     <h4>Dark</h4>
@@ -80,7 +92,7 @@
                     <p>rgba(15,24,40,1)</p>
                 </div>
             </div>
-            
+
             <div class="colorbox surface">
                 <div class="colorname">
                     <h4>Surface</h4>
@@ -88,7 +100,7 @@
                     <p>rgba(15,24,40,1)</p>
                 </div>
             </div>
-            
+
             <div class="colorbox softdark">
                 <div class="colorname">
                     <h4>Soft Dark</h4>
@@ -105,8 +117,8 @@
                 </div>
             </div>
 
-            
-            
+
+
         </section>
 
         <section id="typografi">
@@ -121,7 +133,7 @@
 
             <h2>Paragraffer</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            
+
             <pre class="line-numbers">
                 <code class="language-css">
     #typografi p {
@@ -191,6 +203,7 @@
 
             <h2>Frisør Card</h2>
 
+
             <div class="card">
 
                 <div class="card-img">
@@ -230,9 +243,8 @@
                 </div>
 
                 <button>Se priser</button>
-
             </div>
-            
+
             <pre class="line-numbers">
                 <code class="language-css">
     .card {
@@ -334,7 +346,7 @@
     }
                 </code>
             </pre>
-            
+
             <h2>Vælg service- Card</h2>
 
             <div class="card servicelist">
@@ -362,7 +374,7 @@
                 </label>
 
             </div>
-            
+
             <pre class="line-numbers">
                 <code class="language-css">
     .card.servicelist {
@@ -433,7 +445,7 @@
                 </ul>
 
             </nav>
-            
+
             <pre class="line-numbers">
                 <code class="language-css">
     li a {
