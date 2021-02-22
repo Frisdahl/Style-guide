@@ -9,6 +9,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
+    <meta charset="utf-8">
+
+    <script defer src="https://cdn.aws.dk/assets/dawa-autocomplete2/1.0.0/dawa-autocomplete2.min.js"></script>
+
 </head>
 
 <body>
@@ -18,31 +22,31 @@
 
 
     <img id="header-logo" class="invisible" src="img/logo.png">
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
     <nav id="navigation">
-    
+
         <div id="nav-home" onclick="goToHome()" class="nav-link">
             <img src="img/icon-home.png">
         </div>
-        
+
         <div id="nav-appointments" onclick="console.log('Appointments')" class="nav-link">
             <img src="img/icon-calendar.png">
         </div>
-        
+
         <div id="nav-favorites" onclick="console.log('Favorites')" class="nav-link">
             <img src="img/icon-star.png">
         </div>
-        
+
         <div id="nav-profile" onclick="console.log('Profile')" class="nav-link">
             <img src="img/icon-user.png">
         </div>
-        
+
     </nav>
 
 
@@ -60,21 +64,21 @@
 
 
     <section id="login">
-        
+
         <h1>Velkommen til<br><span>InStyle</span></h1>
 
         <div class="card">
 
             <h3>Indtast telefonnummer</h3>
 
-            <input id="login-username" data="phone">
+            <input class="default" id="login-username" data="phone">
 
             <h3>Indtast kodeord</h3>
 
-            <input id="login-password" data="password" type="password">
-            
+            <input class="default" id="login-password" data="password" type="password">
+
             <button type="submit" onclick="login()">Log ind</button>
-            
+
             <a>Opret bruger</a>
 
         </div>
@@ -86,11 +90,11 @@
 
 
     <section id="home-screen">
-        
+
         <h1>Velkommen tilbage<br><span id="welcome-name"></span></h1>
-        
+
         <div class="card" onclick="goToSearch()">
-            
+
             <img class="background-image" src="img/hairdresser-1.png">
 
             <h3>Se frisører</h3>
@@ -99,18 +103,322 @@
         </div>
 
     </section>
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     <section id="search">
-    
-        <input class="searchbar">
+
+        <input type="search" placeholder="Postnr. eller by" class="searchbar default" id="autocomplete-stormodtagerpostnumre-false" aria-autocomplete="list" autocomplete="on">
         <div class="searchbar-overlay">
             <img src="img/icon-search.png">
         </div>
+
+        <div id="search-results">
+
+            <div class="card" onclick="goToCustomer1()">
+
+                <div class="card-img">
+                    <img src="img/hairdresser-1.png">
+                </div>
+
+                <h3>Frisør Pelino</h3>
+
+                <div></div>
+
+                <div class="card-stars">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <span>(121)</span>
+                </div>
+
+                <div class="card-distance">
+                    <img src="img/distance.png">
+                    <span>1,2 km</span>
+                </div>
+
+                <div class="card-prices">
+
+                    <div>
+                        <span>Dameklip</span>
+                        <span class="price">300,00 DKK</span>
+                    </div>
+
+                    <div>
+                        <span>Herreklip</span>
+                        <span class="price">175,00 DKK</span>
+                    </div>
+
+                </div>
+
+                <button>Se priser</button>
+            </div>
+
+            <div class="card">
+
+                <div class="card-img">
+                    <img src="img/hairdresser-1.png">
+                </div>
+
+                <h3>Frisør Pelino</h3>
+
+                <div></div>
+
+                <div class="card-stars">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <span>(121)</span>
+                </div>
+
+                <div class="card-distance">
+                    <img src="img/distance.png">
+                    <span>1,2 km</span>
+                </div>
+
+                <div class="card-prices">
+
+                    <div>
+                        <span>Dameklip</span>
+                        <span class="price">300,00 DKK</span>
+                    </div>
+
+                    <div>
+                        <span>Herreklip</span>
+                        <span class="price">175,00 DKK</span>
+                    </div>
+
+                </div>
+
+                <button>Se priser</button>
+            </div>
+
+            <div class="card">
+
+                <div class="card-img">
+                    <img src="img/hairdresser-1.png">
+                </div>
+
+                <h3>Frisør Pelino</h3>
+
+                <div></div>
+
+                <div class="card-stars">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <span>(121)</span>
+                </div>
+
+                <div class="card-distance">
+                    <img src="img/distance.png">
+                    <span>1,2 km</span>
+                </div>
+
+                <div class="card-prices">
+
+                    <div>
+                        <span>Dameklip</span>
+                        <span class="price">300,00 DKK</span>
+                    </div>
+
+                    <div>
+                        <span>Herreklip</span>
+                        <span class="price">175,00 DKK</span>
+                    </div>
+
+                </div>
+
+                <button>Se priser</button>
+            </div>
+
+            <div class="card">
+
+                <div class="card-img">
+                    <img src="img/hairdresser-1.png">
+                </div>
+
+                <h3>Frisør Pelino</h3>
+
+                <div></div>
+
+                <div class="card-stars">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <span>(121)</span>
+                </div>
+
+                <div class="card-distance">
+                    <img src="img/distance.png">
+                    <span>1,2 km</span>
+                </div>
+
+                <div class="card-prices">
+
+                    <div>
+                        <span>Dameklip</span>
+                        <span class="price">300,00 DKK</span>
+                    </div>
+
+                    <div>
+                        <span>Herreklip</span>
+                        <span class="price">175,00 DKK</span>
+                    </div>
+
+                </div>
+
+                <button>Se priser</button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <section id="customer1" class="customer">
+
+        <div class="customer-hero"></div>
+        
+        <h2>Frisør Pelino</h2>
+        <div class="card-stars">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <span>(121)</span>
+                </div>
+
+        <div class="customer-card-wrapper">
+
+            <h3>Fremhævede services</h3>
+            <div class="card servicelist">
+                <label class="service-item" for="dameklip">
+                    <input class="checkbox" type="checkbox" id="dameklip" name="dameklip" value="300">
+                    <span>Dameklip</span>
+                    <span class="price">300,00 DKK</span>
+                </label>
+                <label class="service-item" for="herreklip">
+                    <input class="checkbox" type="checkbox" id="herreklip" name="herreklip" value="175">
+                    <span>Herreklip</span>
+                    <span class="price">175,00 DKK</span>
+                </label>
+                <label class="service-item" for="balayage">
+                    <input class="checkbox" type="checkbox" id="balayage" name="balayage" value="1600">
+                    <span>Balayage lysning + toning</span>
+                    <span class="price">1.600,00 DKK</span>
+                </label>
+                <label class="service-item" for="farve-medium">
+                    <input class="checkbox" type="checkbox" id="farve-medium" name="farve-medium" value="700">
+                    <span>Farve - mellemlangt hår</span>
+                    <span class="price">700,00 DKK</span>
+                </label>
+            </div>
+            
+            <h3>Klipning</h3>
+            <div class="card servicelist">
+                <label class="service-item" for="vehicle1">
+                    <input class="checkbox" type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <span>Dameklip</span>
+                    <span class="price">300,00 DKK</span>
+                </label>
+                <label class="service-item" for="vehicle2">
+                    <input class="checkbox" type="checkbox" id="vehicle2" name="vehicle1" value="Bike">
+                    <span>Herreklip</span>
+                    <span class="price">175,00 DKK</span>
+                </label>
+                <label class="service-item" for="vehicle3">
+                    <input class="checkbox" type="checkbox" id="vehicle3" name="vehicle1" value="Bike">
+                    <span>Balayage lysning + toning</span>
+                    <span class="price">1.600,00 DKK</span>
+                </label>
+                <label class="service-item" for="vehicle4">
+                    <input class="checkbox" type="checkbox" id="vehicle4" name="vehicle1" value="Bike">
+                    <span>Farve - mellemlangt hår</span>
+                    <span class="price">700,00 DKK</span>
+                </label>
+            </div>
+            
+            <h3>Farve</h3>
+            <div class="card servicelist">
+                <label class="service-item" for="vehicle1">
+                    <input class="checkbox" type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <span>Dameklip</span>
+                    <span class="price">300,00 DKK</span>
+                </label>
+                <label class="service-item" for="vehicle2">
+                    <input class="checkbox" type="checkbox" id="vehicle2" name="vehicle1" value="Bike">
+                    <span>Herreklip</span>
+                    <span class="price">175,00 DKK</span>
+                </label>
+                <label class="service-item" for="vehicle3">
+                    <input class="checkbox" type="checkbox" id="vehicle3" name="vehicle1" value="Bike">
+                    <span>Balayage lysning + toning</span>
+                    <span class="price">1.600,00 DKK</span>
+                </label>
+                <label class="service-item" for="vehicle4">
+                    <input class="checkbox" type="checkbox" id="vehicle4" name="vehicle1" value="Bike">
+                    <span>Farve - mellemlangt hår</span>
+                    <span class="price">700,00 DKK</span>
+                </label>
+            </div>
+
+        </div>
+        
+        <button type="submit" class="buttom-button" onclick="goToDateSelect()">Næste</button>
+
+
+    </section>
+    
+    
+    
+    
+    
+    
+    <section id="date-select">
+        
+
+        
+        <button type="submit" class="buttom-button" onclick="goToTimeSelect()">Næste</button>
+        
+    </section>
+    
+    <section id="time-select">
+        
+        <div class="card"></div>
+        
+        <button type="submit" class="buttom-button" onclick="goToPayment()">Gå til betaling</button>
+        
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    <section id="payment">
+        
+        <button type="submit" class="buttom-button" onclick="goToPayment()">Gå til betaling</button>
         
     </section>
 
