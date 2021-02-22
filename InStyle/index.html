@@ -12,59 +12,65 @@
 </head>
 
 <body>
-    
-    
-    
-    
-    
-    <img id="header-logo" src="img/logo.png">
-    
-    
-    
-    
+
+
+
+
+
+    <img id="header-logo" class="invisible" src="img/logo.png">
+
+
+
+
 
     <section id="load-in" class="active-section">
-        
-        <img src="img/logo-tagline.png"> 
-        
+
+        <img src="img/logo-tagline.png">
+
     </section>
-    
-    
-    
-    
-    
+
+
+
+
+
     <section id="login">
         
+        <h1>Velkommen til<br><span>InStyle</span></h1>
+
         <div class="card">
-        
-        <input data="phone">
-        
-        <input data="password">
+
+            <h3>Indtast telefonnummer</h3>
+
+            <input id="login-username" data="phone">
+
+            <h3>Indtast kodeord</h3>
+
+            <input id="login-password" data="password" type="password">
             
-            </div>
-    
-        <button class="buttom-button" onclick="goToHome()">Login</button>
-        
+            <button type="submit" onclick="login()">Log ind</button>
+            
+            <a>Opret bruger</a>
+
+        </div>
+
     </section>
-    
-    
-    
-    
-    
+
+
+
+
+
     <section id="home-screen">
-    
+
         <button onclick="goTo"></button>
-        
+
     </section>
-    
+
     <section id="home-screen"></section>
-    
-    
-    
-    
+
+
+
+
 
 </body>
-    
-<script src="js/main.js"></script>
 
-</html>
+<script src="js/main.js"></script></html>

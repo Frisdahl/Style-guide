@@ -49,13 +49,16 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+h1 span,
+h2 span {
     font-family: 'graphikbold'
 }
 
 h1 {
     color: var(--dark);
     font-size: 32px;
+    line-height: 32px;
 }
 
 h2 {
@@ -63,11 +66,24 @@ h2 {
     color: var(--dark);
 }
 
+h3 {
+    font-size: 18px;
+}
+
+h1 span {
+    font-size: 1em;
+    color: var(--accent);
+}
+
 p,
 span {
     font-size: 16px;
     line-height: 24px;
     color: var(--softdark);
+}
+
+a {
+    color: var(--accent);
 }
 
 body {
@@ -79,6 +95,8 @@ section {
     min-height: 100vh;
     position: relative;
     display: none;
+    opacity: 0;
+    transition: .2s;
 }
 
 .active-section {
@@ -91,6 +109,20 @@ section {
     transform: translate(-50%);
     top: 50px;
     left: 50%;
+    opacity: 0;
+    transition: .2s;
+}
+
+.invisible {
+    display: none;
+}
+
+.fadeout {
+    opacity: 0 !important;
+}
+
+.fadein {
+    opacity: 1 !important;
 }
 
 
@@ -104,9 +136,13 @@ input {
     border: 0;
     display: block;
     box-shadow: 0 3px 6px var(--shadow);
-    width: 280px;
+    width: 290px;
     padding: 15px 10px;
     border-radius: 10px;
+}
+
+input:active, input:focus {
+    outline: 0;
 }
 
 
@@ -316,6 +352,7 @@ button:active {
 
 #load-in {
     height: 100vh;
+    opacity: 1;
 }
 
 #load-in img {
@@ -334,9 +371,42 @@ button:active {
 
 /* Login Styling */
 
-#login input {
+#login input:first-of-type {
+    margin-bottom: 15px;
+}
+
+#login .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#login .card h3 {
+    margin-bottom: 5px;
+}
+
+#login .card button {
+    margin-bottom: 10px;
+}
+
+#login .card a {
     
 }
+
+#login h1 {
+    text-align: center;
+    position: absolute;
+    width: 80%;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
 
 
 
