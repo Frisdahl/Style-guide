@@ -7,7 +7,7 @@ var homeScreen = document.getElementById("home-screen");
 var headerLogo = document.getElementById("header-logo")
 
 
-// Load In
+// Load In Fade
 setTimeout(function () {
 
     loadInScreen.classList.add("fadeout");
@@ -30,17 +30,31 @@ setTimeout(function () {
 
     }, 200)
 
-}, 3000) // time in millisecond for as long as you like
+}, 500) // time in millisecond for as long as you like
+
+/* Delay tilrettes til sidst */
 
 
 function login() {
-    var username = document.getElementById("login-username");
+    
+    var username = document.getElementById("login-username").value;
+    var insertName = document.getElementById("welcome-name")
+    
     console.log(username.value);
+    
+    loginScreen.classList.remove("active-section");
+    homeScreen.classList.add("active-section");
+    
+    insertName.innerHTML= username;
+    
+    
 }
 
 
 
-
+function test() {
+    console.log("test")
+}
 
 
 
@@ -50,6 +64,7 @@ function goToHome() {
 
     console.log(this);
     var parentOfButton = this.parentElement.nodeName;
+    
     console.log(parentOfButton);
 
 }
