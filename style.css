@@ -514,13 +514,14 @@ li a {
 }
 
 
+.flexbox-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+
 
 .calendar {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -225px;
-  margin-left: -195px;
   width: 360px;
   height: 400px;
   padding: 15px;
@@ -560,6 +561,7 @@ li a {
   right: 10px;
 }
 .calendar--nav h1 {
+  color: #fff;
   margin: 0;
   position: absolute;
   left: 40px;
