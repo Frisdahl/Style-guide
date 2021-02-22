@@ -117,15 +117,18 @@ body {
 }
 
 .sidenav a {
-    padding: 6px 8px 6px 16px;
+    padding: 15px 8px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: var(--light);
     display: block;
+    font-family: "graphik";
+    border-bottom: 1px solid var(--accent);
+    transition: .2s;
 }
 
 .sidenav a:hover {
-    color: var(--accent);
+    background: var(--accent);
 }
 
 .sidenav img {
@@ -409,6 +412,7 @@ button:active {
     margin: 0 -15px;
     display: block;
     border-top: 1px solid var(--dark10p);
+    cursor: pointer;
 }
 
 .service-item:first-of-type {
