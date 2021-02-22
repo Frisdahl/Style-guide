@@ -25,17 +25,17 @@
 
 @font-face {
     font-family: graphik;
-    src: url(fonts/Graphik-Regular.otf);
+    src: url(../fonts/Graphik-Regular.otf);
 }
 
 @font-face {
     font-family: graphikbold;
-    src: url(fonts/Graphik-Bold.otf);
+    src: url(../fonts/Graphik-Bold.otf);
 }
 
 @font-face {
     font-family: graphiksemibold;
-    src: url(fonts/Graphik-Semibold.otf);
+    src: url(../fonts/Graphik-Semibold.otf);
 }
 
 * {
@@ -85,6 +85,32 @@ section {
     display: block;
 }
 
+#header-logo {
+    width: 170px;
+    position: fixed;
+    transform: translate(-50%);
+    top: 50px;
+    left: 50%;
+}
+
+
+
+
+
+
+/* Input Styling */
+
+input {
+    border: 0;
+    display: block;
+    box-shadow: 0 3px 6px var(--shadow);
+    width: 280px;
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+
+
+
 
 
 
@@ -116,6 +142,169 @@ button:active {
     opacity: 1;
 }
 
+.buttom-button {
+    position: absolute;
+    left: 50%;
+    bottom: 90px;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+
+
+
+/* Card styling */
+
+.card {
+    width: 340px;
+    max-width: 350px;
+    padding: 15px;
+    box-shadow: 0 3px 6px var(--shadow);
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.card-img {
+    height: 125px;
+    width: 400px;
+    position: relative;
+    overflow: hidden;
+    margin: -15px 0 0 -15px;
+}
+
+.card-img img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    left: 50%;
+    top: 50%;
+}
+
+.card h2 {
+    margin-top: 10px;
+}
+
+.card-stars {
+    height: 15px;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.card-stars .star {
+    width: 15px;
+    margin-right: 5px;
+    float: left;
+}
+
+.card-stars span {
+    float: left;
+    font-family: "graphikbold";
+    color: var(--dark);
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.card-distance {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.card-distance img {
+    width: 25px;
+}
+
+.card-distance span {
+    float: left;
+    font-family: "graphikbold";
+    color: var(--dark);
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    margin-left: 5px;
+}
+
+
+.card-prices {
+    position: relative;
+}
+
+.card-prices div {
+    width: 100%;
+    height: 25px;
+}
+
+.card-prices span {
+    color: var(--dark);
+    float: left;
+    font-family: "graphiksemibold";
+}
+
+.card-prices span.price {
+    float: right;
+}
+
+.card button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+
+.card.servicelist {
+    padding-bottom: 0;
+}
+
+.service-item {
+    height: 80px;
+    width: calc(100% + 30px);
+    position: relative;
+    margin: 0 -15px;
+    display: block;
+    border-top: 1px solid var(--dark10p);
+    cursor: pointer;
+}
+
+.service-item:first-of-type {
+    margin-top: -15px;
+    border: 0;
+}
+
+.service-item input {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+
+:checked .service-item {
+    background: red;
+}
+
+.service-item span {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 40px;
+    font-size: 14px;
+    font-family: "graphiksemibold"
+}
+
+.service-item span.price {
+    right: 15px;
+    left: inherit;
+    font-family: "graphik"
+}
+
 
 
 
@@ -136,6 +325,19 @@ button:active {
     top: 50%;
     left: 50%;
 }
+
+
+
+
+
+
+
+/* Login Styling */
+
+#login input {
+    
+}
+
 
 
 
