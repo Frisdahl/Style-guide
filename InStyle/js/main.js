@@ -122,15 +122,42 @@ function goToDateSelect() {
     console.log(selectedService);
 }
 
+
+
+/* Calendar Script */
+
+let myCalendar = new VanillaCalendar({
+    selector: "#myCalendar",
+    pastDates: false,
+    months: ['Januar', 'Februar', 'Marts', 'April', 'Maj', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'December'],
+    shortWeekday: ['Søn', 'Man', 'Tir', 'Ons', 'Tor', 'Fre', 'Lør'],
+    onSelect: (data, elem) => {},
+});
+
+
+
+
+
 function goToTimeSelect() {
     removeActive();
     timeSelect.classList.add("active-section");
+    
+    var calendar = document.getElementById("myCalendar");
+    var activeCalendarDate = document.querySelector(".vanilla-calendar-date--selected");
+    
+    console.log(activeCalendarDate.dataset.calendarDate)
+    
 }
 
 function goToPayment() {
     removeActive();
     payment.classList.add("active-section");
 }
+
+
+
+
+
 
 
 

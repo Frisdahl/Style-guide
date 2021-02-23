@@ -577,6 +577,32 @@ button:active {
 
 
 
+/* Calendar Styling */
+
+#myCalendar {
+    width: 340px;
+    border-radius: 10px;
+    margin-top: 150px;
+}
+
+#myCalendar .vanilla-calendar-date {
+    padding: 20px 0;
+}
+
+.vanilla-calendar-week {
+    background: var(--dark) !important; 
+}
+
+.vanilla-calendar .vanilla-calendar-date--selected {
+    background-color: var(--accent) !important;
+    border-radius: 10px;
+}
+
+.vanilla-calendar .vanilla-calendar-date--selected span {
+    color: var(--light) !important;
+}
+
+
 
 
 

@@ -13,6 +13,10 @@
 
     <script defer src="https://cdn.aws.dk/assets/dawa-autocomplete2/1.0.0/dawa-autocomplete2.min.js"></script>
 
+    <!-- Load Calendar -->
+    <link rel="stylesheet" href="css/vanilla-calendar-min.css">
+    <script src="js/vanilla-calendar-min.js"></script>
+
 </head>
 
 <body>
@@ -397,7 +401,7 @@
 
     <section id="date-select">
 
-
+        <div id="myCalendar" class="vanilla-calendar"></div>
 
         <button type="submit" class="buttom-button" onclick="goToTimeSelect()">Næste</button>
 
@@ -411,15 +415,11 @@
 
     </section>
 
-
-
-
-
-
-
     <section id="payment">
 
         <button type="submit" class="buttom-button" onclick="goToPayment()">Gå til betaling</button>
+
+
 
     </section>
 
@@ -429,4 +429,6 @@
 
 </body>
 
-<script src="js/main.js"></script></html>
+<script src="js/main.js"></script>
+
+</html>
