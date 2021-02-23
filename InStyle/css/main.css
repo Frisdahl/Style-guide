@@ -61,7 +61,8 @@ h1 {
     line-height: 40px;
     text-align: left;
     position: absolute;
-    width: 310px;;
+    width: 310px;
+    ;
     top: 125px;
     left: 50%;
     transform: translateX(-50%);
@@ -159,7 +160,7 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 
@@ -180,7 +181,8 @@ input.default {
     border-radius: 10px;
 }
 
-input:active, input:focus {
+input:active,
+input:focus {
     outline: 0;
 }
 
@@ -196,14 +198,14 @@ input:active, input:focus {
     position: absolute;
     top: 150px;
     right: 0;
-    transform: translateX(-50%);    
+    transform: translateX(-50%);
 }
 
 .searchbar-overlay img {
     height: 16px;
     position: absolute;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     right: 15px;
 }
 
@@ -423,7 +425,7 @@ button:active {
 #load-in img {
     position: absolute;
     width: 200px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
 }
@@ -448,7 +450,7 @@ button:active {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 #login .card h3 {
@@ -459,9 +461,7 @@ button:active {
     margin-bottom: 10px;
 }
 
-#login .card a {
-    
-}
+#login .card a {}
 
 
 
@@ -562,9 +562,10 @@ button:active {
     margin-left: 5px;
 }
 
-.customer h2, .customer .card-stars {
+.customer h2,
+.customer .card-stars {
     margin-left: 20px;
-    
+
 }
 
 .customer h2 {
@@ -588,7 +589,7 @@ button:active {
 
 
 .vanilla-calendar-week {
-    background: var(--dark) !important; 
+    background: var(--dark) !important;
 }
 
 .vanilla-calendar .vanilla-calendar-date--selected {
@@ -632,7 +633,8 @@ button:active {
 
 
 
-#payment {
+#order-confirmed,
+#order-receipt {
     background-color: var(--dark);
     background-image: url(../img/logo-s.png);
     background-size: 150%;
@@ -642,16 +644,17 @@ button:active {
 
 .confirmed-order-container {
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     left: 50%;
     top: 40%;
+    transition: .2s;
 }
 
 .order-confirmed-animation {
     position: relative;
 }
 
-#payment h1 {
+#order-confirmed h1 {
     position: absolute;
     top: 80%;
     color: var(--light);
@@ -669,5 +672,205 @@ button:active {
 
 
 
+/* Order Receipt */
+
+.receipt-container {
+    width: 101%;
+    height: 290px;
+    background-color: #f0f0f0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.receipt-container-zickzag {
+    height: 312px; 
+    width: 340px;
+}
+
+.receipt-header {
+    padding-top: 30px;
+    padding-left: 30px;
+    font-size: 18px;
+    color: #0F1828;
+}
+
+.reciept-date {
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+.receipt-main-content-header {
+    width: 100%;
+    display: flex;
+    font-size: 14px;
+    color: #BFBFBF;
+    margin-bottom: 35px;
+}
+
+.receipt-main-content-header h4 {
+    position: absolute;
+    margin-top: 10px;
+}
+
+.receipt-main-content-header h4:first-of-type {
+    left: 30px;
+}
+
+.receipt-main-content-header h4:last-of-type {
+    right: 30px;
+}
+
+.receipt-row {
+    height: 30px;
+}
+
+.receipt-row p {
+    position: absolute;
+}
+
+.receipt-row p:first-of-type {
+    left: 30px;
+    text-transform: capitalize;
+}
+
+.receipt-row p:last-of-type {
+    right: 30px;
+}
+
+.main-content-p2 {
+    position: absolute;
+    left: 35px;
+}
+
+.main-content-p3 {
+    position: absolute;
+    left: 200px;
+}
+
+.main-content-p4 {
+    position: absolute;
+    right: 40px;
+}
+
+.receipt-footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid var(--dark10p);
+}
+
+.receipt-footer h2 {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    left: 35px;
+    font-size: 16px;
+}
+
+#receipt-footer-price {
+    left: inherit !important;
+    right: 30px;
+    width: 50%;
+    text-align: right;
+}
+
+#receipt-footer-price {
+    left: 260px;
+}
+
+.zickzag {
+    position: absolute;
+    width: 110%;
+    bottom: -19px;
+    left: -9px;
+}
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* Profile Styling */
+.edit-profile-container {
+ height: 100vh;
+ width: 100%;
+
+}
+.header-profile-container {
+  width: 100%;
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img.profile-circle {
+  position: relative;
+  width: 170px;
+  height: 170px;
+}
+
+.profile-pic-text {
+  position: absolute;
+  font-size: 60px;
+  color: #fff;
+}
+.profile-name {
+  display: flex;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.upload-profile-pic {
+display: flex;
+justify-content: center;
+  margin-bottom: 25px;
+}
+
+.profile-menu-1 {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  position: relative;
+  background-color:
+}
+.aftaler {
+  position: absolute;
+  left: 26px;
+  top: 15px;
+  height: 29px;
+  width: 29px;
+}
+.menu-text {
+  position: absolute;
+  top: 18px;
+  left: 75px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.menu-right-arrow {
+  position: absolute;
+  right: 26px;
+  top: 13px;
+  width: 30px;
+  height: 33px;
+}
+.line-under-menu {
+  height: 1px;
+  border: 0px;
+  background-color: #BCBFC3
+}
+.menu-profile-container {
+  height: 300px;
+}

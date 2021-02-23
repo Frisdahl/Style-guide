@@ -6,7 +6,8 @@ var homeScreen = document.getElementById("home-screen");
 var search = document.getElementById("search");
 var dateSelect = document.getElementById("date-select");
 var timeSelect = document.getElementById("time-select");
-var payment = document.getElementById("payment");
+var orderConfirmed = document.getElementById("order-confirmed");
+var orderReceipt = document.getElementById("order-receipt");
 
 
 
@@ -92,18 +93,13 @@ function login() {
     } else {
 
         // 03 Error status
-        
+
         console.log("wrong");
 
     }
 
 
 
-
-
-
-
-    
 
 
 
@@ -157,13 +153,14 @@ function goToDateSelect() {
     removeActive();
     dateSelect.classList.add("active-section");
 
-    var selectedService = []
+    selectedService = []
     var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
 
     for (var i = 0; i < checkboxes.length; i++) {
         selectedService.push(checkboxes[i].name)
         selectedService.push(checkboxes[i].value)
     }
+
     console.log(selectedService);
 }
 
@@ -182,32 +179,111 @@ let myCalendar = new VanillaCalendar({
 
 
 
+var activeCalendarDate = "";
 
 function goToTimeSelect() {
     removeActive();
     timeSelect.classList.add("active-section");
 
     var calendar = document.getElementById("myCalendar");
-    var activeCalendarDate = document.querySelector(".vanilla-calendar-date--selected");
+    activeCalendarDate = document.querySelector(".vanilla-calendar-date--selected");
 
     console.log(activeCalendarDate.dataset.calendarDate);
 
 }
 
-function goToPayment() {
+var selectedTime = "";
+
+function goToConfirmed() {
+    
     removeActive();
-    payment.classList.add("active-section");
+    orderConfirmed.classList.add("active-section");
 
-    var selectedTime = []
-    var radio = document.querySelector('#time-select input[type=radio]:checked')
+    selectedTime = document.querySelector('#time-select input[type=radio]:checked')
 
-    console.log(radio.value)
+    var asd = orderConfirmed.querySelector(".confirmed-order-container");
+
+    console.log(selectedTime.value)
 
     setTimeout(function () {
 
-        //Fadeout
+        asd.classList.add("fadeout");
 
-    }, 3000)
+        setTimeout(function () {
+            removeActive();
+            orderReceipt.classList.add("active-section");
+        }, 200)
 
+    }, 2000);
+
+    var servicePrint1 = document.getElementById("service-print1");
+    var servicePricePrint1 = document.getElementById("service-price-print1");
+    var servicePrint2 = document.getElementById("service-print2");
+    var servicePricePrint2 = document.getElementById("service-price-print2");
+
+    var totalPricePrint = document.getElementById("receipt-footer-price");
+
+
+    // Print date and time into reciept
+
+    var datePrint = document.getElementById("date-print");
+    var timePrint = document.getElementById("time-print");
+
+    datePrint.innerHTML = activeCalendarDate.dataset.calendarDate;
+    timePrint.innerHTML = "Kl. " + selectedTime.value;
+
+
+
+
+
+
+        // Laves om til loop, der automatisk tilføjer ny row
+        // Prints prices into reciept
+        servicePrint1.innerHTML = selectedService[0];
+    servicePricePrint1.innerHTML = selectedService[1] + ",00 DKK";
+
+    servicePrint2.innerHTML = selectedService[2];
+    servicePricePrint2.innerHTML = selectedService[3] + ",00 DKK";
+
+
+
+
+    // Sorts prices from services
+    var serviceSorted = [];
+    var priceSorted = [];
+    for (var i = 0; i < selectedService.length; i += 2) {
+        serviceSorted.push(selectedService[i]);
+        selectedService[i + 1] && priceSorted.push(selectedService[i + 1]);
+    }
+
+    var priceSortedInt = parseInt(priceSorted);
+
+    // Converts strings to int
+    var result = priceSorted.map(function (x) {
+        return parseInt(x, 10);
+    });
+
+
+    // Calculate total price and insert into reciept
+    totalPricePrint.innerHTML = result.reduce((a, b) => a + b, 0) + ",00 DKK";
+
+
+
+
+
+}
+
+// Brug til dato
+function getSnippet(text, length) {
+    var rx = new RegExp("^.{" + length + "}[^ ]*");
+    return rx.exec(text)[0];
+}
+console.log(getSnippet("get snippet text using javascript?", 1)); // get
+console.log(getSnippet("get snippet text using javascript?", 3)); // get
+console.log(getSnippet("get snippet text using javascript?", 10)); // get snippet
+console.log(getSnippet("get snippet text using javascript?", 11)); // get snippet
+
+
+function recieptPrinter() {
 
 }
