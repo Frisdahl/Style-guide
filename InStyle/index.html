@@ -302,14 +302,14 @@
 
         <div class="customer-hero"></div>
 
-        <h2>Frisør Hans</h2>
+        <h2>Frisør Pelino</h2>
         <div class="card-stars">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <span>(48)</span>
+            <img class="star" src="img/star-active.png">
+            <img class="star" src="img/star-active.png">
+            <img class="star" src="img/star-active.png">
+            <img class="star" src="img/star-active.png">
+            <img class="star" src="img/star-active.png">
+            <span>(48)</span>
         </div>
 
         <div class="customer-card-wrapper">
@@ -399,7 +399,11 @@
 
 
 
-    <section id="date-select">
+    <section id="date-select" class="customer">
+
+        <div class="customer-hero"></div>
+
+        <h2>Vælg dato</h2>
 
         <div id="myCalendar" class="vanilla-calendar"></div>
 
@@ -407,19 +411,111 @@
 
     </section>
 
-    <section id="time-select">
+    <section id="time-select" class="customer">
 
-        <div class="card"></div>
+        <div class="customer-hero"></div>
 
-        <button type="submit" class="buttom-button" onclick="goToPayment()">Gå til betaling</button>
+        <h2>Vælg tidspunkt</h2>
+
+        <div class="customer-card-wrapper">
+
+            <div class="card servicelist">
+                <label class="service-item" for="80">
+                    <input class="checkbox" type="radio" id="80" name="timeselect" value="08:00">
+                    <span>08:00</span>
+                    <img class="arrow" src="img/arrow-right.png">
+                </label>
+                <label class="service-item" for="83">
+                    <input class="checkbox" type="radio" id="83" name="timeselect" value="08:30">
+                    <span>08:30</span>
+                    <img class="arrow" src="img/arrow-right.png">
+                </label>
+                <label class="service-item" for="90">
+                    <input class="checkbox" type="radio" id="90" name="timeselect" value="09:00">
+                    <span>09:00</span>
+                    <img class="arrow" src="img/arrow-right.png">
+                </label>
+                <label class="service-item" for="93">
+                    <input class="checkbox" type="radio" id="93" name="timeselect" value="09:30">
+                    <span>09:30</span>
+                    <img class="arrow" src="img/arrow-right.png">
+                </label>
+                <label class="service-item" for="100">
+                    <input class="checkbox" type="radio" id="100" name="timeselect" value="10:00">
+                    <span>10:00</span>
+                    <img class="arrow" src="img/arrow-right.png">
+                </label>
+                <label class="service-item" for="103">
+                    <input class="checkbox" type="radio" id="103" name="timeselect" value="10:30">
+                    <span>10:30</span>
+                    <img class="arrow" src="img/arrow-right.png">
+                </label>
+                <label class="service-item" for="110">
+                    <input class="checkbox" type="radio" id="110" name="timeselect" value="11:00">
+                    <span>11:00</span>
+                    <img class="arrow" src="img/arrow-right.png">
+                </label>
+                <label class="service-item" for="113">
+                    <input class="checkbox" type="radio" id="113" name="timeselect" value="11:30">
+                    <span>11:30</span>
+                    <img class="arrow" src="img/arrow-right.png">
+                </label>
+                <label class="service-item" for="120">
+                    <input class="checkbox" type="radio" id="120" name="timeselect" value="12:00">
+                    <span>12:00</span>
+                    <img class="arrow" src="img/arrow-right.png">
+                </label>
+                <label class="service-item" for="123">
+                    <input class="checkbox" type="radio" id="123" name="timeselect" value="12:30">
+                    <span>12:30</span>
+                    <img class="arrow" src="img/arrow-right.png">
+                </label>
+                <label class="service-item" for="130">
+                    <input class="checkbox" type="radio" id="130" name="timeselect" value="13:00">
+                    <span>13:00</span>
+                    <img class="arrow" src="img/arrow-right.png">
+                </label>
+                <label class="service-item" for="133">
+                    <input class="checkbox" type="radio" id="133" name="timeselect" value="13:30">
+                    <span>13:30</span>
+                    <img class="arrow" src="img/arrow-right.png">
+                </label>
+                <label class="service-item" for="140">
+                    <input class="checkbox" type="radio" id="140" name="timeselect" value="14:00">
+                    <span>14:00</span>
+                    <img class="arrow" src="img/arrow-right.png">
+                </label>
+                <label class="service-item" for="143">
+                    <input class="checkbox" type="radio" id="143" name="timeselect" value="14:30">
+                    <span>14:30</span>
+                    <img class="arrow" src="img/arrow-right.png">
+                </label>
+                <label class="service-item" for="150">
+                    <input class="checkbox" type="radio" id="150" name="timeselect" value="15:00">
+                    <span>15:00</span>
+                    <img class="arrow" src="img/arrow-right.png">
+                </label>
+                <label class="service-item" for="153">
+                    <input class="checkbox" type="radio" id="153" name="timeselect" value="15:30">
+                    <span>15:30</span>
+                    <img class="arrow" src="img/arrow-right.png">
+                </label>
+            </div>
+
+        </div>
+
+        <button type="submit" class="buttom-button" onclick="goToPayment()">Bestil tid</button>
 
     </section>
 
     <section id="payment">
 
-        <button type="submit" class="buttom-button" onclick="goToPayment()">Gå til betaling</button>
-
-
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        
+        <div class="confirmed-order-container">
+        <lottie-player class="order-confirmed-animation" src="https://assets5.lottiefiles.com/packages/lf20_pujrdkzc.json" background="transparent" speed="1" style="width: 300px; height: 300px;" autoplay></lottie-player>
+        <h1>Din tid er blevet<br><span>bekræftet</span></h1>
+            </div>
 
     </section>
 
@@ -429,6 +525,4 @@
 
 </body>
 
-<script src="js/main.js"></script>
-
-</html>
+<script src="js/main.js"></script></html>

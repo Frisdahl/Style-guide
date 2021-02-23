@@ -145,13 +145,18 @@ function goToTimeSelect() {
     var calendar = document.getElementById("myCalendar");
     var activeCalendarDate = document.querySelector(".vanilla-calendar-date--selected");
     
-    console.log(activeCalendarDate.dataset.calendarDate)
+    console.log(activeCalendarDate.dataset.calendarDate);
     
 }
 
 function goToPayment() {
     removeActive();
     payment.classList.add("active-section");
+    
+    var selectedTime = []
+    var radio = document.querySelector('#time-select input[type=radio]:checked')
+    
+    console.log(radio.value)
 }
 
 
