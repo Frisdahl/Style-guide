@@ -60,13 +60,9 @@ setTimeout(function () {
 /* Login */
 function login() {
 
+    // 01 Tjek om brugeren er oprettet
 
-    // 01 Tjek om input er udfyldt
-
-
-    // 02 Tjek brugers fulde navn
-
-    var usernameInput = document.getElementById("login-username").value;
+    var usernameInput = document.getElementById("login-number").value;
 
     var phoneNumber = ["42739363", "30226528", "27730350", "50961120", "23274912"];
     var fullname = ["Alexander", "Julius", "Lauge", "Freja", "Tobias"];
@@ -84,7 +80,7 @@ function login() {
         // Udskriv brugerens navn á samme indexsering som poneNumber
         // console.log(fullname[phoneIndex]);
 
-        // 03 Skift sektion hvis success
+        // 02 Skift sektion hvis success
 
         var insertName = document.getElementById("welcome-name");
 
@@ -95,7 +91,7 @@ function login() {
 
     } else {
 
-        // 04 Error status
+        // 03 Error status
         
         console.log("wrong");
 
