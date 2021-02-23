@@ -13,6 +13,10 @@
 
     <script defer src="https://cdn.aws.dk/assets/dawa-autocomplete2/1.0.0/dawa-autocomplete2.min.js"></script>
 
+    <!-- Load Calendar -->
+    <link rel="stylesheet" href="css/vanilla-calendar-min.css">
+    <script src="js/vanilla-calendar-min.js"></script>
+
 </head>
 
 <body>
@@ -297,16 +301,16 @@
     <section id="customer1" class="customer">
 
         <div class="customer-hero"></div>
-        
+
         <h2>Frisør Pelino</h2>
         <div class="card-stars">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <span>(121)</span>
-                </div>
+            <img class="star" src="img/star-active.png">
+            <img class="star" src="img/star-active.png">
+            <img class="star" src="img/star-active.png">
+            <img class="star" src="img/star-active.png">
+            <img class="star" src="img/star-active.png">
+            <span>(121)</span>
+        </div>
 
         <div class="customer-card-wrapper">
 
@@ -333,7 +337,7 @@
                     <span class="price">700,00 DKK</span>
                 </label>
             </div>
-            
+
             <h3>Klipning</h3>
             <div class="card servicelist">
                 <label class="service-item" for="vehicle1">
@@ -357,7 +361,7 @@
                     <span class="price">700,00 DKK</span>
                 </label>
             </div>
-            
+
             <h3>Farve</h3>
             <div class="card servicelist">
                 <label class="service-item" for="vehicle1">
@@ -383,43 +387,45 @@
             </div>
 
         </div>
-        
+
         <button type="submit" class="buttom-button" onclick="goToDateSelect()">Næste</button>
 
 
     </section>
-    
-    
-    
-    
-    
-    
-    <section id="date-select">
-        
 
-        
+
+
+
+
+
+    <section id="date-select">
+
+        <div id="myCalendar" class="vanilla-calendar"></div>
+
         <button type="submit" class="buttom-button" onclick="goToTimeSelect()">Næste</button>
-        
+
     </section>
-    
+
     <section id="time-select">
-        
+
         <div class="card"></div>
-        
+
         <button type="submit" class="buttom-button" onclick="goToPayment()">Gå til betaling</button>
-        
+
     </section>
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
     <section id="payment">
-        
+
         <button type="submit" class="buttom-button" onclick="goToPayment()">Gå til betaling</button>
-        
+
+
+
     </section>
 
 
@@ -428,4 +434,6 @@
 
 </body>
 
-<script src="js/main.js"></script></html>
+<script src="js/main.js"></script>
+
+</html>
