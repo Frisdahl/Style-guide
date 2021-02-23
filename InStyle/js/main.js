@@ -51,18 +51,67 @@ setTimeout(function () {
 
 
 
+
+
+
+
+
+
 /* Login */
 function login() {
 
-    // Tjek om input er udfyldt
 
-    var username = document.getElementById("login-username").value;
-    var insertName = document.getElementById("welcome-name");
+    // 01 Tjek om input er udfyldt
 
-    loginScreen.classList.remove("active-section");
-    homeScreen.classList.add("active-section");
 
-    insertName.innerHTML = username;
+    // 02 Tjek brugers fulde navn
+
+    var usernameInput = document.getElementById("login-username").value;
+
+    var phoneNumber = ["42739363", "30226528", "27730350", "50961120", "23274912"];
+    var fullname = ["Alexander", "Julius", "Lauge", "Freja", "Tobias"];
+
+    if (phoneNumber.includes(usernameInput)) {
+
+        console.log("welcome");
+
+        // Tjek hvad index nr. indtastet tlf nr. er
+        // console.log(phoneNumber.indexOf(usernameInput));
+
+        var phoneIndex = phoneNumber.indexOf(usernameInput);
+        var username = fullname[phoneIndex];
+
+        // Udskriv brugerens navn á samme indexsering som poneNumber
+        // console.log(fullname[phoneIndex]);
+
+        // 03 Skift sektion hvis success
+
+        var insertName = document.getElementById("welcome-name");
+
+        loginScreen.classList.remove("active-section");
+        homeScreen.classList.add("active-section");
+
+        insertName.innerHTML = username;
+
+    } else {
+
+        // 04 Error status
+        
+        console.log("wrong");
+
+    }
+
+
+
+
+
+
+
+    
+
+
+
+
 
 
 }
@@ -141,39 +190,28 @@ let myCalendar = new VanillaCalendar({
 function goToTimeSelect() {
     removeActive();
     timeSelect.classList.add("active-section");
-    
+
     var calendar = document.getElementById("myCalendar");
     var activeCalendarDate = document.querySelector(".vanilla-calendar-date--selected");
-    
+
     console.log(activeCalendarDate.dataset.calendarDate);
-    
+
 }
 
 function goToPayment() {
     removeActive();
     payment.classList.add("active-section");
-    
+
     var selectedTime = []
     var radio = document.querySelector('#time-select input[type=radio]:checked')
-    
+
     console.log(radio.value)
+
+    setTimeout(function () {
+
+        //Fadeout
+
+    }, 3000)
+
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
