@@ -216,10 +216,6 @@ function goToConfirmed() {
 
     }, 2000);
 
-    var servicePrint1 = document.getElementById("service-print1");
-    var servicePricePrint1 = document.getElementById("service-price-print1");
-    var servicePrint2 = document.getElementById("service-print2");
-    var servicePricePrint2 = document.getElementById("service-price-print2");
 
     var totalPricePrint = document.getElementById("receipt-footer-price");
 
@@ -228,9 +224,16 @@ function goToConfirmed() {
 
     var datePrint = document.getElementById("date-print");
     var timePrint = document.getElementById("time-print");
+    
 
-    datePrint.innerHTML = activeCalendarDate.dataset.calendarDate;
-    timePrint.innerHTML = "Kl. " + selectedTime.value;
+    function getSnippet(text, length) {
+        var rx = new RegExp("^.{" + length + "}[^ ]*");
+        return rx.exec(text)[0];
+    }
+    console.log(getSnippet(activeCalendarDate.dataset.calendarDate, 9)); // get
+
+
+    datePrint.innerHTML = getSnippet(activeCalendarDate.dataset.calendarDate, 9) + " Kl. " + selectedTime.value;
 
 
     // Sorts prices from services
@@ -249,19 +252,14 @@ function goToConfirmed() {
 
 
     var priceList = document.getElementById("receipt-pricelist");
-    
+
     for (var i = 0; i < serviceSorted.length; i++) {
 
-        
+        var servicePrintIndex = document.getElementById("service-print" + i + 1);
+        var servicePricePrintIndex = document.getElementById("service-price-print" + i + 1);
 
-        console.log(i);
-        
-        var servicePrintIndex = document.getElementById("service-print" + i+1);
-        console.log(document.getElementById("service-print" + i + 1))
-        var servicePricePrintIndex = document.getElementById("service-price-print" + i+1);
-    
         priceList.innerHTML += "<div class='receipt-row'><p id='service-print1'>" + serviceSorted[i] + "<p id='service-price-print1'>" + priceSorted[i] + ",00 DKK</div>"
-        
+
     }
 
 
@@ -269,7 +267,7 @@ function goToConfirmed() {
 
 
 
-    // Converts strings to int
+    // Converts strings to integer
     var result = priceSorted.map(function (x) {
         return parseInt(x, 10);
     });
