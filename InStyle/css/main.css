@@ -16,6 +16,9 @@
 
     /* Dark colors */
     --shadow: #D6D8DD;
+    
+    
+    --error: #FF3A41;
 }
 
 ::selection {
@@ -674,12 +677,46 @@ button:active {
 
 /* Order Receipt */
 
+
+.reciept-button-container {
+    width: 300px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.reciept-button {
+    height: 64px;
+    width: 64px;
+    background: var(--surface);
+    border-radius: 10px;   
+    position: relative;
+}
+
+.reciept-button img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.reciept-button:last-of-type {
+    background: var(--error);
+}
+
+
+
+
+
+
 .receipt-container {
     width: 101%;
     background-color: #f0f0f0;
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
+    transform: translateX(-50%);
+    margin-top: 25px;
     left: 50%;
 }
 
