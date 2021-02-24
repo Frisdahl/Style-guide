@@ -8,6 +8,7 @@ var dateSelect = document.getElementById("date-select");
 var timeSelect = document.getElementById("time-select");
 var orderConfirmed = document.getElementById("order-confirmed");
 var orderReceipt = document.getElementById("order-receipt");
+var profileScreen = document.getElementById("profile-page")
 
 
 
@@ -134,6 +135,12 @@ function goToHome() {
     homeScreen.classList.add("active-section");
 }
 
+function goToProfile() {
+    removeActive();
+    profileScreen.classList.add("active-section");
+}
+
+
 function goToSearch() {
     removeActive();
     search.classList.add("active-section");
@@ -224,7 +231,7 @@ function goToConfirmed() {
 
     var datePrint = document.getElementById("date-print");
     var timePrint = document.getElementById("time-print");
-    
+
 
     function getSnippet(text, length) {
         var rx = new RegExp("^.{" + length + "}[^ ]*");
