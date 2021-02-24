@@ -290,7 +290,7 @@ button:active {
     top: 50%;
 }
 
-.card h2 {
+.card h3 {
     margin-top: 10px;
 }
 
@@ -676,7 +676,6 @@ button:active {
 
 .receipt-container {
     width: 101%;
-    height: 290px;
     background-color: #f0f0f0;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -755,8 +754,7 @@ button:active {
 }
 
 .receipt-footer {
-    position: absolute;
-    bottom: 10px;
+    position: relative;
     width: 100%;
     height: 60px;
     border-top: 1px solid var(--dark10p);
@@ -764,7 +762,7 @@ button:active {
 
 .receipt-footer h2 {
     position: absolute;
-    top: 60%;
+    top: 50%;
     transform: translateY(-50%);
     left: 30px;
     font-size: 16px;

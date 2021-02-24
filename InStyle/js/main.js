@@ -195,7 +195,7 @@ function goToTimeSelect() {
 var selectedTime = "";
 
 function goToConfirmed() {
-    
+
     removeActive();
     orderConfirmed.classList.add("active-section");
 
@@ -233,21 +233,6 @@ function goToConfirmed() {
     timePrint.innerHTML = "Kl. " + selectedTime.value;
 
 
-
-
-
-
-        // Laves om til loop, der automatisk tilføjer ny row
-        // Prints prices into reciept
-        servicePrint1.innerHTML = selectedService[0];
-    servicePricePrint1.innerHTML = selectedService[1] + ",00 DKK";
-
-    servicePrint2.innerHTML = selectedService[2];
-    servicePricePrint2.innerHTML = selectedService[3] + ",00 DKK";
-
-
-
-
     // Sorts prices from services
     var serviceSorted = [];
     var priceSorted = [];
@@ -257,6 +242,32 @@ function goToConfirmed() {
     }
 
     var priceSortedInt = parseInt(priceSorted);
+
+
+    // Laves om til loop, der automatisk tilføjer ny row
+    // Prints prices into reciept
+
+
+    var priceList = document.getElementById("receipt-pricelist");
+    
+    for (var i = 0; i < serviceSorted.length; i++) {
+
+        
+
+        console.log(i);
+        
+        var servicePrintIndex = document.getElementById("service-print" + i+1);
+        console.log(document.getElementById("service-print" + i + 1))
+        var servicePricePrintIndex = document.getElementById("service-price-print" + i+1);
+    
+        priceList.innerHTML += "<div class='receipt-row'><p id='service-print1'>" + serviceSorted[i] + "<p id='service-price-print1'>" + priceSorted[i] + ",00 DKK</div>"
+        
+    }
+
+
+
+
+
 
     // Converts strings to int
     var result = priceSorted.map(function (x) {
@@ -273,7 +284,7 @@ function goToConfirmed() {
 
 }
 
-// Brug til dato
+// Brug til dato for at forkorte dag, måned dato
 function getSnippet(text, length) {
     var rx = new RegExp("^.{" + length + "}[^ ]*");
     return rx.exec(text)[0];
