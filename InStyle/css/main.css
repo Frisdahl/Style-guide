@@ -766,7 +766,7 @@ button:active {
     position: absolute;
     top: 60%;
     transform: translateY(-50%);
-    left: 35px;
+    left: 30px;
     font-size: 16px;
 }
 
