@@ -99,14 +99,6 @@ function login() {
 
     }
 
-
-
-
-
-
-
-
-
 }
 
 
@@ -176,11 +168,13 @@ function goToDateSelect() {
 /* Calendar Script */
 
 let myCalendar = new VanillaCalendar({
+
     selector: "#myCalendar",
     pastDates: false,
     months: ['Januar', 'Februar', 'Marts', 'April', 'Maj', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'December'],
     shortWeekday: ['Søn', 'Man', 'Tir', 'Ons', 'Tor', 'Fre', 'Lør'],
-    onSelect: (data, elem) => {},
+    onSelect: (data, elem) => {}
+
 });
 
 
@@ -198,6 +192,7 @@ function goToTimeSelect() {
     console.log(activeCalendarDate.dataset.calendarDate);
 
 }
+
 
 var selectedTime = "";
 
@@ -240,7 +235,7 @@ function goToConfirmed() {
     console.log(getSnippet(activeCalendarDate.dataset.calendarDate, 9)); // get
 
 
-    datePrint.innerHTML = getSnippet(activeCalendarDate.dataset.calendarDate, 9) + " Kl. " + selectedTime.value;
+    datePrint.innerHTML = getSnippet(activeCalendarDate.dataset.calendarDate, 9) + "<br>Kl. " + selectedTime.value;
 
 
     // Sorts prices from services
@@ -291,9 +286,11 @@ function goToConfirmed() {
 
 // Brug til dato for at forkorte dag, måned dato
 function getSnippet(text, length) {
+
     var rx = new RegExp("^.{" + length + "}[^ ]*");
     return rx.exec(text)[0];
 }
+
 console.log(getSnippet("get snippet text using javascript?", 1)); // get
 console.log(getSnippet("get snippet text using javascript?", 3)); // get
 console.log(getSnippet("get snippet text using javascript?", 10)); // get snippet
@@ -303,8 +300,3 @@ console.log(getSnippet("get snippet text using javascript?", 11)); // get snippe
 function recieptPrinter() {
 
 }
-
-
-
-
-

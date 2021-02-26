@@ -98,6 +98,8 @@ a {
 
 body {
     background: var(--light);
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 section {
@@ -679,7 +681,7 @@ button:active {
 
 
 .reciept-button-container {
-    width: 300px;
+    width: 320px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -702,13 +704,28 @@ button:active {
     transform: translate(-50%,-50%);
 }
 
-.reciept-button:last-of-type {
+.reciept-button.cancel {
     background: var(--error);
 }
 
 
+.customer-name {
+    margin: 0 30px 25px;
+    padding-top: 150px;
+}
 
+.customer-name h3  {
+    margin-bottom: 0;
+}
 
+.customer-name p, .customer-name h3 {
+    color: var(--light);
+}
+
+.bekraeftet-icon {
+    width: 130px;
+    margin-bottom: 25px;
+}
 
 
 .receipt-container {
