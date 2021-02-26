@@ -303,3 +303,8 @@ console.log(getSnippet("get snippet text using javascript?", 11)); // get snippe
 function recieptPrinter() {
 
 }
+
+
+
+
+
