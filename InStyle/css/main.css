@@ -847,6 +847,7 @@ button:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top:  100px;
 }
 
 img.profile-circle {
@@ -907,7 +908,7 @@ justify-content: center;
   background-color: #BCBFC3
 }
 .menu-profile-container {
-  height: 300px;
+  height: 200px;
 }
 
 
