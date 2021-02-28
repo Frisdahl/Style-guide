@@ -16,8 +16,8 @@
 
     /* Dark colors */
     --shadow: #D6D8DD;
-    
-    
+
+
     --error: #FF3A41;
 }
 
@@ -519,10 +519,6 @@ button:active {
 
 
 
-
-
-
-
 /* Search styling */
 
 #search-results {
@@ -693,7 +689,7 @@ button:active {
     height: 64px;
     width: 64px;
     background: var(--surface);
-    border-radius: 10px;   
+    border-radius: 10px;
     position: relative;
 }
 
@@ -992,4 +988,3 @@ justify-content: center;
   padding: 0.5em 1em;
   text-align:center;
 }
-
