@@ -13,6 +13,9 @@ var SignUpCountry = document.getElementById("signup-country");
 var SignUpVerification = document.getElementById("signup-verification");
 var SignUpName = document.getElementById("signup-name");
 var SignUpDone = document.getElementById("signup-done");
+var myAppointments = document.getElementById("my-appointments");
+var giftcards = document.getElementById("giftcards");
+var myPoints = document.getElementById("my-points");
 
 
 
@@ -122,10 +125,14 @@ function test() {
 function removeActive() {
     var currentActive = document.querySelector(".active-section");
     currentActive.classList.remove("active-section");
+    window.scrollTo(0,0);
 }
 
 
 
+function goToLogIn() {
+    location.reload();
+}
 
 /* Returns user to homescreen */
 function goToHome() {
@@ -142,6 +149,21 @@ function goToProfile() {
 function goToSearch() {
     removeActive();
     search.classList.add("active-section");
+}
+
+function goToMyAppointments() {
+    removeActive();
+    myAppointments.classList.add("active-section");
+}
+
+function goToGiftcards() {
+    removeActive();
+    giftcards.classList.add("active-section");
+}
+
+function goToPoints() {
+    removeActive();
+    myPoints.classList.add("active-section");
 }
 
 
@@ -172,10 +194,13 @@ function goToSignUpName() {
 
 function goToSignUpDone() {
     var username = document.getElementById("signUpUsername").value;
-    var signUpDoneUsernamePrint = document.getElementById("signUpPrintUsername")
+    var userLastname = document.getElementById("signUpLastname").value;
+    var signUpDoneUsernamePrint = document.getElementById("signUpPrintUsername");
+    var profilePageUsername = document.getElementById("profile-name");
     
     insertNameHome.innerHTML = username;
     signUpDoneUsernamePrint.innerHTML = username;
+    profilePageUsername.innerHTML = username + " " + userLastname;
     
     removeActive();
     SignUpDone.classList.add("active-section");

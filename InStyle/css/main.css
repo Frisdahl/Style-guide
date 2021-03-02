@@ -603,6 +603,9 @@ img.circle-1 {
   font-size: 40px;
   color: #fff;
 }
+#home-screen h1, #login h1, #giftcards h1 {
+    margin-left: 30px;
+}
 
 
 
@@ -1097,6 +1100,395 @@ input.verification {
     transition: .2s;
     z-index: 1;
 }
+
+
+
+
+
+
+/* Mine aftaler styling */
+.pagewrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+#my-appointments h1 {
+    margin-bottom: 30px;
+}
+
+
+.card-mineaftaler {
+  height: 440px;
+    width: 340px;
+    max-width: 350px;
+    padding: 15px;
+    box-shadow: 0 3px 6px var(--shadow);
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 25px;
+    background: #F6F6f6;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-mineaftaler {
+    height: 125px;
+    width: 400px;
+    position: relative;
+    overflow: hidden;
+    margin: -15px 0 0 -15px;
+}
+
+.card-img-mineaftaler img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    left: 50%;
+    top: 50%;
+}
+
+.card-mineaftaler h3 {
+    margin-top: 10px;
+}
+
+.card-stars-mineaftaler {
+    height: 15px;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.card-stars-mineaftaler .star {
+    width: 15px;
+    margin-right: 5px;
+    float: left;
+}
+
+.card-stars-mineaftaler span {
+    float: left;
+    font-family: "graphikbold";
+    color: var(--dark);
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.card-distance-mineaftaler {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.card-distance-mineaftaler img {
+    width: 25px;
+}
+
+.card-distance-mineaftaler span {
+    float: left;
+    font-family: "graphikbold";
+    color: var(--dark);
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    margin-left: 5px;
+}
+
+
+.card-prices-mineaftaler {
+    position: relative;
+}
+
+.card-prices-mineaftaler div {
+    width: 100%;
+    height: 25px;
+}
+
+.card-prices span {
+    color: var(--dark);
+    float: left;
+    font-family: "graphiksemibold";
+}
+
+.card-prices span.price {
+    float: right;
+}
+
+.card-mineaftaler button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+}
+.ændre-tid {
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #F6F6F6;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  font-weight: bold;
+  color: #247B7B;
+
+}
+
+.afbestil-tid {
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #F6F6F6;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  font-weight: bold;
+  color: #A21C2E;
+}
+
+.card.servicelist {
+    padding-bottom: 0;
+}
+.price-mineaftaler {
+  position: absolute;
+  right: 20px;
+}
+
+
+
+
+
+
+
+
+
+/* Gavekort styling */
+#giftcards h1 {
+    margin-bottom: 30px;
+}
+.card-minegavekort {
+    height: 450px;
+    width: 340px;
+    max-width: 350px;
+    padding: 15px;
+    box-shadow: 0 3px 6px var(--shadow);
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 25px;
+    background: #F6F6f6;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-minegavekort {
+    height: 125px;
+    width: 400px;
+    position: relative;
+    overflow: hidden;
+    margin: -15px 0 0 -15px;
+}
+
+.card-img-minegavekort img {
+    position: absolute;
+    transform: translate(-55%, -50%);
+    width: 100%;
+    left: 50%;
+    top: 50%;
+}
+
+.card-minegavekort h3 {
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+.card-minegavekort h4 {
+    margin-bottom: 10px;
+}
+
+.card-stars-minegavekort {
+    height: 15px;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.card-stars-minegavekort .star {
+    width: 15px;
+    margin-right: 5px;
+    float: left;
+}
+
+.card-stars-minegavekort span {
+    float: left;
+    font-family: "graphikbold";
+    color: var(--dark);
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.card-distance-minegavekort {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.card-distance-minegavekort img {
+    width: 25px;
+}
+
+.card-distance-minegavekort span {
+    float: left;
+    font-family: "graphikbold";
+    color: var(--dark);
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    margin-left: 5px;
+}
+
+
+.card-prices-minegavekort {
+    position: relative;
+    margin-top: 30px;
+}
+
+.card-prices-minegavekort div {
+    width: 100%;
+    height: 25px;
+}
+
+.card-prices span {
+    color: var(--dark);
+    float: left;
+    font-family: "graphiksemibold";
+}
+
+.card-prices span.price {
+    float: right;
+}
+.giftcard-saldo {
+
+}
+.card-minegavekort button {
+    width: 70%;
+    margin-bottom: 10px;
+    padding: 0;
+}
+.ændre-tid {
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #F6F6F6;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  font-weight: bold;
+  color: #247B7B;
+
+}
+
+.afbestil-tid {
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #F6F6F6;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  font-weight: bold;
+  colo3r: #A21C2E;
+}
+
+.card.servicelist {
+    padding-bottom: 0;
+}
+.price-minegavekort {
+  position: absolute;
+  right: 52px;
+}
+.text-minegavekort {
+  position: absolute;
+  left: 52px;
+}
+.giftcard-h3 {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+
+}
+.giftcard-h4 {
+  display: flex;
+  justify-content: center;
+  width: 64%;
+
+
+
+}
+.giftcard-saldo2 {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ margin-top: 20px;
+}
+.giftcard-saldo {
+  background-color: #0D1523;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  color: #f6f6f6;
+  font-size: 16px;
+  font-weight: 32px;
+
+}
+.hr-gavekort {
+  height: 2px;
+  width: 200px;
+}
+.barcode-gavekort {
+  position: absolute;
+  width: 100%;
+  height: 35px;
+}
+
+
+
+
+
+
+
+
+
+/* Mine point */
+.flueben{
+float: right;
+width: 65px;
+height:65px;
+margin-bottom: 10%;
+margin-right: 5%;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+#my-points .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width; 100%;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: left;
+  font-family: arial;
+  border-radius: 25px;
+  border: 2px solid #black;
+  padding: 5%;
+
+}
+
+
+
+
+
+
+
+
 
 
 
