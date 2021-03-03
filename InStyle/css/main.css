@@ -100,10 +100,10 @@ body {
 
 section {
     width: 100%;
-    min-height: 100vh;
     display: none;
     transition: .2s;
     z-index: 1;
+    padding-bottom: 105px;
 }
 
 .active-section {
@@ -113,7 +113,7 @@ section {
 
 #header-logo {
     width: 170px;
-    position: fixed;
+    position: absolute;
     transform: translate(-50%);
     top: 50px;
     left: 50%;
@@ -132,6 +132,13 @@ section {
 
 .fadein {
     opacity: 1 !important;
+}
+
+.backarrow {
+    height: 16px;
+    position: absolute;
+    top: 58px;
+    left: 30px;
 }
 
 
@@ -171,6 +178,8 @@ section {
 
 
 
+
+
 /* Input Styling */
 
 input.default {
@@ -199,7 +208,7 @@ input:focus {
     height: 48px;
     position: absolute;
     top: 150px;
-    right: 0;
+    right: 15px;
     transform: translateX(-50%);
 }
 
@@ -518,7 +527,6 @@ button:active {
 }
 .page-wrapper {
   width: 100%;
-  height: 100vh;
   display:flex;
   flex-direction: column;
 }
@@ -759,6 +767,9 @@ img.circle-1 {
     color: var(--light);
 }
 
+.darksection {
+    height: 100vh;
+}
 
 
 
@@ -1050,7 +1061,7 @@ justify-content: center;
     margin-bottom: 15px;
 }
 
-#signup-done img {
+#signup-done .profile-picture {
     width: 200px;
     position: relative;
     margin-left: calc(50% - 30px);
@@ -1120,10 +1131,6 @@ input.verification {
 
 }
 
-#my-appointments h1 {
-    margin-bottom: 30px;
-}
-
 
 .card-mineaftaler {
   height: 440px;
@@ -1137,7 +1144,7 @@ input.verification {
     cursor: pointer;
     position: relative;
     margin-bottom: 25px;
-    background: #F6F6f6;
+    background: #FFF;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -1226,15 +1233,16 @@ input.verification {
     width: 100%;
     margin-top: 20px;
     padding: 0;
+    background: #FFF;
 }
 .ændre-tid {
   height: 40px;
   border-radius: 10px;
   border: 0;
-  background-color: #F6F6F6;
-  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  background-color: var(--light);
+  box-shadow: 0px 3px 6px 0px var(--shadow);
   font-weight: bold;
-  color: #247B7B;
+  color: var(--accent);
 
 }
 
@@ -1242,10 +1250,10 @@ input.verification {
   height: 40px;
   border-radius: 10px;
   border: 0;
-  background-color: #F6F6F6;
-  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  background-color: var(--light);
+  box-shadow: 0px 3px 6px 0px var(--shadow);
   font-weight: bold;
-  color: #A21C2E;
+  color: var(--error);
 }
 
 .card.servicelist {
@@ -1280,7 +1288,7 @@ input.verification {
     cursor: pointer;
     position: relative;
     margin-bottom: 25px;
-    background: #F6F6f6;
+    background: var(--light);
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -1381,10 +1389,10 @@ input.verification {
   height: 40px;
   border-radius: 10px;
   border: 0;
-  background-color: #F6F6F6;
+  background-color: var(--light);
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
   font-weight: bold;
-  color: #247B7B;
+  color: var(--accent);
 
 }
 
@@ -1392,7 +1400,7 @@ input.verification {
   height: 40px;
   border-radius: 10px;
   border: 0;
-  background-color: #F6F6F6;
+  background-color: var(--light);
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
   font-weight: bold;
   colo3r: #A21C2E;
@@ -1435,7 +1443,7 @@ input.verification {
   height: 40px;
   border-radius: 10px;
   border: 0;
-  color: #f6f6f6;
+  color: var(--light);
   font-size: 16px;
   font-weight: 32px;
 
@@ -1569,7 +1577,7 @@ margin-right: 5%;
 .point-box-container {
   width: 320px;
   height: 185px;
-  background-color: #247B7B;
+  background-color: var(--accent);
   border-radius: 40px;
   position: relative;
 }
@@ -1642,7 +1650,7 @@ margin-right: 5%;
   text-align: left;
   font-family: arial;
   border-radius: 25px;
-  border: 2px solid #black;
+  border: 2px solid var(--dark);
   padding: 20px;
   position: relative;
 }

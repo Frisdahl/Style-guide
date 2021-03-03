@@ -65,11 +65,6 @@ setTimeout(function () {
 
 
 
-
-
-
-
-
 /* Login */
 function login() {
 
@@ -117,15 +112,12 @@ function test() {
 }
 
 
-
-
-
-
 /* Removes currently active section class from current */
 function removeActive() {
     var currentActive = document.querySelector(".active-section");
     currentActive.classList.remove("active-section");
     window.scrollTo(0,0);
+    headerLogo.src ="img/logo.png";
 }
 
 
@@ -207,10 +199,6 @@ function goToSignUpDone() {
     SignUpDone.classList.add("active-section");
 }
 
-
-
-
-
 /* Emulering af TAB - kan forbedres, skal forbedres - burde laves med en loop i stedet */
 
 var verificationProcess = document.getElementById("verification-process");
@@ -250,15 +238,8 @@ function emulateTab4() {
 }
 
 
-
-
-
-
-
-
-
-
 function goToDateSelect() {
+    
     //Tjek om input er udfyldt
     removeActive();
     dateSelect.classList.add("active-section");
@@ -311,6 +292,7 @@ function goToConfirmed() {
 
     removeActive();
     orderConfirmed.classList.add("active-section");
+    headerLogo.src ="img/logo-negativ.png";
 
     selectedTime = document.querySelector('#time-select input[type=radio]:checked')
 
@@ -325,6 +307,7 @@ function goToConfirmed() {
         setTimeout(function () {
             removeActive();
             orderReceipt.classList.add("active-section");
+            headerLogo.src ="img/logo-negativ.png";
         }, 200)
 
     }, 2000);
@@ -338,16 +321,13 @@ function goToConfirmed() {
     var datePrint = document.getElementById("date-print");
     var timePrint = document.getElementById("time-print");
 
-
     function getSnippet(text, length) {
         var rx = new RegExp("^.{" + length + "}[^ ]*");
         return rx.exec(text)[0];
     }
     console.log(getSnippet(activeCalendarDate.dataset.calendarDate, 9)); // get
 
-
-    datePrint.innerHTML = getSnippet(activeCalendarDate.dataset.calendarDate, 9) + "<br>Kl. " + selectedTime.value;
-
+    datePrint.innerHTML = getSnippet(activeCalendarDate.dataset.calendarDate, 9) + ", kl. " + selectedTime.value;
 
     // Sorts prices from services
     var serviceSorted = [];
@@ -375,42 +355,16 @@ function goToConfirmed() {
 
     }
 
-
-
-
-
-
     // Converts strings to integer
     var result = priceSorted.map(function (x) {
         return parseInt(x, 10);
     });
 
-
     // Calculate total price and insert into reciept
     totalPricePrint.innerHTML = result.reduce((a, b) => a + b, 0) + ",00 DKK";
 
-
-
-
-
 }
 
-// Brug til dato for at forkorte dag, måned dato
-function getSnippet(text, length) {
-
-    var rx = new RegExp("^.{" + length + "}[^ ]*");
-    return rx.exec(text)[0];
-}
-
-console.log(getSnippet("get snippet text using javascript?", 1)); // get
-console.log(getSnippet("get snippet text using javascript?", 3)); // get
-console.log(getSnippet("get snippet text using javascript?", 10)); // get snippet
-console.log(getSnippet("get snippet text using javascript?", 11)); // get snippet
-
-
-function recieptPrinter() {
-
-}
 
 
 
