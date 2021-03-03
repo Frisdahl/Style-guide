@@ -1572,6 +1572,7 @@ margin-right: 5%;
   background-color: #247B7B;
   border-radius: 40px;
   position: relative;
+<<<<<<< HEAD
 }
 
 h1, h3, p {
@@ -1646,6 +1647,27 @@ h1, h3, p {
   width: 40px;
   background-color: var(--accent);
 >>>>>>> parent of 0f30132 (asd)
+=======
+}
+
+.level {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 16px;
+}
+
+.dine-point {
+  position: absolute;
+  top: 22%;
+  left: 10%;
+  font-size: 22px;
+}
+.hr-line1 {
+  position: absolute;
+  width: 40px;
+  background-color: var(--accent);
+>>>>>>> parent of 0f30132 (asd)
   border-radius: 3px;
   border: 0;
   height: 4px;
@@ -1653,6 +1675,7 @@ h1, h3, p {
   top: 27%;
   left: 5%;
 );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ab18d80a148de7ba5a00de92a40b71ffe46be03c
 =======
@@ -1667,11 +1690,18 @@ h1, h3, p {
     display: flex;
     flex-direction: row;
 =======
+=======
+}
+.coin {
+>>>>>>> parent of 0f30132 (asd)
   position: absolute;
   top: 32%;
   right: 20%;
   display: flex;
   flex-direction: row;
+<<<<<<< HEAD
+>>>>>>> parent of 0f30132 (asd)
+=======
 >>>>>>> parent of 0f30132 (asd)
 }
 
@@ -1685,6 +1715,7 @@ h1, h3, p {
 }
 
 .next-offer {
+<<<<<<< HEAD
 <<<<<<< HEAD
     position: absolute;
     bottom: 25%;
@@ -1720,12 +1751,18 @@ h1, h3, p {
 >>>>>>> parent of 0f30132 (asd)
 =======
 >>>>>>> parent of ab18d80 (asdasd)
+=======
+  position: absolute;
+  bottom: 25%;
+  left: 10%;
+>>>>>>> parent of 0f30132 (asd)
 }
 
 .progress {
   position: absolute;
   bottom: 20%;
   left: 10%;
+<<<<<<< HEAD
 }
 .booking-card-container {
   margin-top: 25px;
@@ -1798,4 +1835,6 @@ font-size: 14px;
   left: 2%;
   width: 20%;
   height: 20%;
+=======
+>>>>>>> parent of 0f30132 (asd)
 }
