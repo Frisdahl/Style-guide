@@ -64,7 +64,7 @@ h1 {
     line-height: 40px;
     text-align: left;
     width: 310px;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 h2 {
@@ -104,9 +104,6 @@ section {
     display: none;
     transition: .2s;
     z-index: 1;
-    padding-bottom: 105px;
-    margin-top: -75px;
-    padding-top: 75px;
 }
 
 .active-section {
@@ -116,9 +113,9 @@ section {
 
 #header-logo {
     width: 170px;
-    position: relative;
+    position: fixed;
     transform: translate(-50%);
-    top: 60px;
+    top: 50px;
     left: 50%;
     opacity: 0;
     transition: .2s;
@@ -135,12 +132,6 @@ section {
 
 .fadein {
     opacity: 1 !important;
-}
-
-.back-arrow {
-    height: 18px;
-    position: absolute;
-    top: 70px;
 }
 
 
@@ -189,7 +180,7 @@ input.default {
     width: 290px;
     padding: 15px 10px;
     border-radius: 10px;
-    border-bottom: 4px solid var(--dark);
+    border-bottom:  4px solid var(--dark);
 }
 
 input:active,
@@ -199,7 +190,7 @@ input:focus {
 
 .searchbar {
     position: relative;
-    top: 100px;
+    top: 150px;
     margin: 0 auto;
 }
 
@@ -207,8 +198,8 @@ input:focus {
     width: 46px;
     height: 48px;
     position: absolute;
-    top: 142px;
-    right: 15px;
+    top: 150px;
+    right: 0;
     transform: translateX(-50%);
 }
 
@@ -522,108 +513,97 @@ button:active {
 }
 
 * {
-    padding: 0px;
-    margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
-
 .page-wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
 }
-
 .frontpage-card-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-
 .front-page-card {
-    margin-top: 40px;
-    width: 300px;
-    height: 190px;
-    background-color: #f6f66f6;
-    border-radius: 10px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-    position: relative;
+  margin-top: 40px;
+  width: 300px;
+  height: 190px;
+  background-color: #f6f66f6;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+  position: relative;
 }
 
 .card-number {
-    height: 200px;
-    width: 100%;
+  height: 200px;
+  width: 100%;
 }
-
-.icon-holder {
-    position: absolute;
-    top: 25px;
-    left: 200px;
-    height: 70px;
-    width: 70px;
-    border-radius: 14px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.icon-holder  {
+  position: absolute;
+  top: 25px;
+  left: 200px;
+  height: 70px;
+  width: 70px;
+  border-radius: 14px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
 .icon-holder-icon {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 img.circle-1 {
-    position: absolute;
-    top: 0px;
+  position: absolute;
+  top: 0px;
 
 }
-
 .circle-1 {
-    border-radius: 40px;
+  border-radius: 40px;
 }
-
 .frontpage-card-footer {
-    position: absolute;
-    top: 120px;
-    left: 20px;
-    height: 100px;
-    width: 100%;
-    display: flex;
+  position: absolute;
+  top: 120px;
+  left: 20px;
+  height: 100px;
+  width: 100%;
+  display: flex;
 
 }
-
 .right-card-arrow {
-    position: absolute;
-    left: 80%;
-    top: 20%;
-    width: 10px;
-    height: 16px;
+  position: absolute;
+  left: 80%;
+  top: 20%;
+  width: 10px;
+  height: 16px;
 }
 
 .h4-card {
-    position: absolute;
-    top: 20%;
+  position: absolute;
+  top: 20%;
 }
-
 .plus-icon {
-    position: absolute;
-    top: 10%;
-    left: 17%;
-    font-size: 20px;
-    color: #fff;
+  position: absolute;
+  top: 10%;
+  left: 17%;
+  font-size: 20px;
+  color: #fff;
 }
-
 .upperleft-number {
-    position: absolute;
-    top: 12%;
-    left: 10%;
-    font-size: 40px;
-    color: #fff;
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  font-size: 40px;
+  color: #fff;
 }
-
-#home-screen h1,
-#login h1,
-#giftcards h1 {
+#home-screen h1, #login h1, #giftcards h1 {
     margin-left: 30px;
 }
 
@@ -640,7 +620,7 @@ img.circle-1 {
 }
 
 #search-results .card:first-of-type {
-    margin-top: 130px;
+    margin-top: 200px;
 }
 
 
@@ -814,7 +794,7 @@ img.circle-1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
 }
 
 .reciept-button.cancel {
@@ -824,15 +804,14 @@ img.circle-1 {
 
 .customer-name {
     margin: 0 30px 25px;
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
-.customer-name h3 {
+.customer-name h3  {
     margin-bottom: 0;
 }
 
-.customer-name p,
-.customer-name h3 {
+.customer-name p, .customer-name h3 {
     color: var(--light);
 }
 
@@ -968,86 +947,78 @@ img.circle-1 {
 
 /* Profile Styling */
 .edit-profile-container {
-
-    width: 100%;
+ height: 100vh;
+ width: 100%;
 
 }
-
 .header-profile-container {
-    width: 100%;
-    height: 210px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
+  width: 100%;
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:  100px;
 }
 
 img.profile-circle {
-    position: relative;
-    width: 170px;
-    height: 170px;
+  position: relative;
+  width: 170px;
+  height: 170px;
 }
 
 .profile-pic-text {
-    position: absolute;
-    font-size: 60px;
-    color: #fff;
+  position: absolute;
+  font-size: 60px;
+  color: #fff;
 }
-
 .profile-name {
-    display: flex;
-    justify-content: center;
-    font-size: 26px;
-    font-weight: bold;
-    margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 12px;
 }
-
 .upload-profile-pic {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
+display: flex;
+justify-content: center;
+  margin-bottom: 25px;
 }
 
 .profile-menu-1 {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    position: relative;
-    background-color:
+  width: 100%;
+  height: 60px;
+  display: flex;
+  position: relative;
+  background-color:
 }
-
 .aftaler {
-    position: absolute;
-    left: 26px;
-    top: 15px;
-    height: 29px;
-    width: 29px;
+  position: absolute;
+  left: 26px;
+  top: 15px;
+  height: 29px;
+  width: 29px;
 }
-
 .menu-text {
-    position: absolute;
-    top: 18px;
-    left: 75px;
-    font-size: 20px;
-    font-weight: bold;
+  position: absolute;
+  top: 18px;
+  left: 75px;
+  font-size: 20px;
+  font-weight: bold;
 }
-
 .menu-right-arrow {
-    position: absolute;
-    right: 26px;
-    top: 13px;
-    width: 30px;
-    height: 33px;
+  position: absolute;
+  right: 26px;
+  top: 13px;
+  width: 30px;
+  height: 33px;
 }
-
 .line-under-menu {
-    height: 1px;
-    border: 0px;
-    background-color: #BCBFC3
+  height: 1px;
+  border: 0px;
+  background-color: #BCBFC3
 }
-
 .menu-profile-container {
-    height: 200px;
+  height: 200px;
 }
 
 
@@ -1062,8 +1033,7 @@ img.profile-circle {
     padding-left: 30px;
 }
 
-.signup input:first-of-type,
-#signup-verification input {
+.signup input:first-of-type, #signup-verification input {
     margin-top: 15px;
 }
 
@@ -1085,7 +1055,7 @@ img.profile-circle {
     position: relative;
     margin-left: calc(50% - 30px);
     transform: translateX(-50%);
-    margin-top: 100px;
+    margin-top: 150px;
     margin-bottom: -120px;
 }
 
@@ -1142,10 +1112,11 @@ input.verification {
 
 /* Mine aftaler styling */
 .pagewrapper {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
 }
 
@@ -1155,7 +1126,7 @@ input.verification {
 
 
 .card-mineaftaler {
-    height: 440px;
+  height: 440px;
     width: 340px;
     max-width: 350px;
     padding: 15px;
@@ -1256,35 +1227,33 @@ input.verification {
     margin-top: 20px;
     padding: 0;
 }
-
 .ændre-tid {
-    height: 40px;
-    border-radius: 10px;
-    border: 0;
-    background-color: #F6F6F6;
-    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-    font-weight: bold;
-    color: #247B7B;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #F6F6F6;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  font-weight: bold;
+  color: #247B7B;
 
 }
 
 .afbestil-tid {
-    height: 40px;
-    border-radius: 10px;
-    border: 0;
-    background-color: #F6F6F6;
-    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-    font-weight: bold;
-    color: #A21C2E;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #F6F6F6;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  font-weight: bold;
+  color: #A21C2E;
 }
 
 .card.servicelist {
     padding-bottom: 0;
 }
-
 .price-mineaftaler {
-    position: absolute;
-    right: 20px;
+  position: absolute;
+  right: 20px;
 }
 
 
@@ -1299,7 +1268,6 @@ input.verification {
 #giftcards h1 {
     margin-bottom: 30px;
 }
-
 .card-minegavekort {
     height: 450px;
     width: 340px;
@@ -1336,7 +1304,6 @@ input.verification {
     margin-top: 25px;
     margin-bottom: 30px;
 }
-
 .card-minegavekort h4 {
     margin-bottom: 10px;
 }
@@ -1402,94 +1369,85 @@ input.verification {
 .card-prices span.price {
     float: right;
 }
+.giftcard-saldo {
 
-.giftcard-saldo {}
-
+}
 .card-minegavekort button {
     width: 70%;
     margin-bottom: 10px;
     padding: 0;
 }
-
 .ændre-tid {
-    height: 40px;
-    border-radius: 10px;
-    border: 0;
-    background-color: #F6F6F6;
-    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-    font-weight: bold;
-    color: #247B7B;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #F6F6F6;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  font-weight: bold;
+  color: #247B7B;
 
 }
 
 .afbestil-tid {
-    height: 40px;
-    border-radius: 10px;
-    border: 0;
-    background-color: #F6F6F6;
-    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-    font-weight: bold;
-    colo3r: #A21C2E;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #F6F6F6;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  font-weight: bold;
+  colo3r: #A21C2E;
 }
 
 .card.servicelist {
     padding-bottom: 0;
 }
-
 .price-minegavekort {
-    position: absolute;
-    right: 52px;
+  position: absolute;
+  right: 52px;
 }
-
 .text-minegavekort {
-    position: absolute;
-    left: 52px;
+  position: absolute;
+  left: 52px;
 }
-
 .giftcard-h3 {
-    display: flex;
-    justify-content: center;
-    width: 75%;
+  display: flex;
+  justify-content: center;
+  width: 75%;
 
 }
-
 .giftcard-h4 {
-    display: flex;
-    justify-content: center;
-    width: 64%;
+  display: flex;
+  justify-content: center;
+  width: 64%;
 
 
 
 }
-
 .giftcard-saldo2 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ margin-top: 20px;
 }
-
 .giftcard-saldo {
-    background-color: #0D1523;
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    border: 0;
-    color: #f6f6f6;
-    font-size: 16px;
-    font-weight: 32px;
+  background-color: #0D1523;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  color: #f6f6f6;
+  font-size: 16px;
+  font-weight: 32px;
 
 }
-
 .hr-gavekort {
-    height: 2px;
-    width: 200px;
+  height: 2px;
+  width: 200px;
 }
-
 .barcode-gavekort {
-    position: absolute;
-    width: 100%;
-    height: 35px;
+  position: absolute;
+  width: 100%;
+  height: 35px;
 }
 
 
@@ -1501,31 +1459,30 @@ input.verification {
 
 
 /* Mine point */
-.flueben {
-    float: right;
-    width: 65px;
-    height: 65px;
-    margin-bottom: 10%;
-    margin-right: 5%;
+.flueben{
+float: right;
+width: 65px;
+height:65px;
+margin-bottom: 10%;
+margin-right: 5%;
 }
 
 .title {
-    color: grey;
-    font-size: 18px;
+  color: grey;
+  font-size: 18px;
 }
 
 #my-points .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width;
-    100%;
-    margin-top: 2%;
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: left;
-    font-family: arial;
-    border-radius: 25px;
-    border: 2px solid #black;
-    padding: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width; 100%;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: left;
+  font-family: arial;
+  border-radius: 25px;
+  border: 2px solid #black;
+  padding: 5%;
 
 }
 
@@ -1541,61 +1498,61 @@ input.verification {
 
 /*----------------------- Cards til alt muligt ---------------------------------------*/
 
-.center {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.center{
+  height:100vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
-.property-card {
-    height: 18em;
-    width: 14em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    position: relative;
-    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    border-radius: 16px;
-    overflow: hidden;
-    -webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
-    box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+.property-card{
+  height:18em;
+  width:14em;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  position:relative;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius:16px;
+  overflow:hidden;
+  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
 }
 
 .property-image {
-    height: 6em;
-    width: 14em;
-    padding: 1em 2em;
-    position: Absolute;
-    top: 0px;
-    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    background-image: url('hair.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+  height:6em;
+  width:14em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('hair.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
 }
 
 
-.property-description {
-    background-color: #FAFAFC;
-    height: 12em;
-    width: 14em;
-    position: absolute;
-    bottom: 0em;
-    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    padding: 0.5em 1em;
-    text-align: center;
+.property-description{
+  background-color: #FAFAFC;
+  height:12em;
+  width:14em;
+  position:absolute;
+  bottom:0em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align:center;
 }
 
 
@@ -1610,18 +1567,17 @@ input.verification {
   margin-top: 120px;
 }
 .point-box-container {
-    width: 320px;
-    height: 185px;
-    background-color: #247B7B;
-    border-radius: 20px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+  width: 320px;
+  height: 185px;
+  background-color: #247B7B;
+  border-radius: 40px;
+  position: relative;
 }
 
 
 
 .level {
+<<<<<<< HEAD
 <<<<<<< HEAD
     position: absolute;
     top: 10%;
@@ -1649,9 +1605,22 @@ input.verification {
   font-size: 22px;
   color: #f6f6f6;
 >>>>>>> ab18d80a148de7ba5a00de92a40b71ffe46be03c
+=======
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 16px;
 }
 
+.dine-point {
+  position: absolute;
+  top: 22%;
+  left: 10%;
+  font-size: 22px;
+>>>>>>> parent of 0f30132 (asd)
+}
 .hr-line1 {
+<<<<<<< HEAD
 <<<<<<< HEAD
     position: absolute;
     width: 40px;
@@ -1667,6 +1636,11 @@ input.verification {
   position: absolute;
   width: 40px;
   background-color: #1B6060;
+=======
+  position: absolute;
+  width: 40px;
+  background-color: var(--accent);
+>>>>>>> parent of 0f30132 (asd)
   border-radius: 3px;
   border: 0;
   height: 4px;
@@ -1674,28 +1648,39 @@ input.verification {
   top: 27%;
   left: 5%;
 );
+<<<<<<< HEAD
 >>>>>>> ab18d80a148de7ba5a00de92a40b71ffe46be03c
+=======
+>>>>>>> parent of 0f30132 (asd)
 }
-
 .coin {
+<<<<<<< HEAD
 <<<<<<< HEAD
     position: absolute;
     top: 32%;
     right: 20%;
     display: flex;
     flex-direction: row;
+=======
+  position: absolute;
+  top: 32%;
+  right: 20%;
+  display: flex;
+  flex-direction: row;
+>>>>>>> parent of 0f30132 (asd)
 }
 
 .point {
-    position: absolute;
-    top: 22%;
-    right: 8%;
-    display: flex;
-    flex-direction: row;
-    font-size: 22px;
+  position: absolute;
+  top: 22%;
+  right: 8%;
+  display: flex;
+  flex-direction: row;
+  font-size: 22px;
 }
 
 .next-offer {
+<<<<<<< HEAD
     position: absolute;
     bottom: 25%;
     left: 10%;
@@ -1721,12 +1706,17 @@ input.verification {
   left: 10%;
   color: #f6f6f6;
 >>>>>>> ab18d80a148de7ba5a00de92a40b71ffe46be03c
+=======
+  position: absolute;
+  bottom: 25%;
+  left: 10%;
+>>>>>>> parent of 0f30132 (asd)
 }
 
 .progress {
-    position: absolute;
-    bottom: 20%;
-    left: 10%;
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
 }
 .booking-card-container {
   margin-top: 25px;

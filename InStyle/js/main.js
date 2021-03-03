@@ -125,20 +125,13 @@ function test() {
 function removeActive() {
     var currentActive = document.querySelector(".active-section");
     currentActive.classList.remove("active-section");
-    window.scrollTo(0, 0);
-
-    if (currentActive.classList.contains("darkpage")) {
-        // Change color of logo
-        headerLogo.src = "img/logo-negativ.png"
-    } else {
-        headerLogo.src = "img/logo.png"
-    }
+    window.scrollTo(0,0);
 }
 
 
 
 function goToLogIn() {
-    window.scrollTo(0, 0);
+    window.scrollTo(0,0);
     location.reload();
 }
 
@@ -189,7 +182,7 @@ function goToSignUpCountry() {
 function goToSignUpVerification() {
     removeActive();
     SignUpVerification.classList.add("active-section");
-
+    
     var verificationInputs = document.querySelectorAll("#signup-verification input");
     console.log(verificationInputs);
     verificationInputs[0].focus();
@@ -205,11 +198,11 @@ function goToSignUpDone() {
     var userLastname = document.getElementById("signUpLastname").value;
     var signUpDoneUsernamePrint = document.getElementById("signUpPrintUsername");
     var profilePageUsername = document.getElementById("profile-name");
-
+    
     insertNameHome.innerHTML = username;
     signUpDoneUsernamePrint.innerHTML = username;
     profilePageUsername.innerHTML = username + " " + userLastname;
-
+    
     removeActive();
     SignUpDone.classList.add("active-section");
 }
@@ -228,16 +221,16 @@ function emulateTab1() {
     var verificationInputs = document.querySelectorAll("#signup-verification input");
     verificationInputs[1].focus();
     verificationInputs[0].classList.add("filled-input");
-
+    
     verificationProcess.style.width = '58px';
-
+    
 }
 
 function emulateTab2() {
     var verificationInputs = document.querySelectorAll("#signup-verification input");
     verificationInputs[2].focus();
     verificationInputs[1].classList.add("filled-input");
-
+    
     verificationProcess.style.width = '116px';
 }
 
@@ -245,16 +238,17 @@ function emulateTab3() {
     var verificationInputs = document.querySelectorAll("#signup-verification input");
     verificationInputs[3].focus();
     verificationInputs[2].classList.add("filled-input");
-
+    
     verificationProcess.style.width = '174px';
 }
 
 function emulateTab4() {
     var verificationInputs = document.querySelectorAll("#signup-verification input");
     verificationInputs[3].classList.add("filled-input");
-
+    
     goToSignUpName();
 }
+
 
 
 
@@ -352,7 +346,7 @@ function goToConfirmed() {
     console.log(getSnippet(activeCalendarDate.dataset.calendarDate, 9)); // get
 
 
-    datePrint.innerHTML = getSnippet(activeCalendarDate.dataset.calendarDate, 9) + ", kl. " + selectedTime.value;
+    datePrint.innerHTML = getSnippet(activeCalendarDate.dataset.calendarDate, 9) + "<br>Kl. " + selectedTime.value;
 
 
     // Sorts prices from services
@@ -399,7 +393,24 @@ function goToConfirmed() {
 
 
 
+}
+
+// Brug til dato for at forkorte dag, måned dato
+function getSnippet(text, length) {
+
+    var rx = new RegExp("^.{" + length + "}[^ ]*");
+    return rx.exec(text)[0];
+}
+
+console.log(getSnippet("get snippet text using javascript?", 1)); // get
+console.log(getSnippet("get snippet text using javascript?", 3)); // get
+console.log(getSnippet("get snippet text using javascript?", 10)); // get snippet
+console.log(getSnippet("get snippet text using javascript?", 11)); // get snippet
 
 
+function recieptPrinter() {
 
 }
+
+
+
