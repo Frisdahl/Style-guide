@@ -1574,15 +1574,14 @@ margin-right: 5%;
   position: relative;
 }
 
-h1, h3, p {
-  color: #F6F6F6
-}
+
 
 .level {
   position: absolute;
   top: 15%;
   left: 10%;
   font-size: 16px;
+  color: #f6f6f6;
 }
 
 .dine-point {
@@ -1590,7 +1589,7 @@ h1, h3, p {
   bottom: 55%;
   left: 10%;
   font-size: 22px;
-  color: #fff;
+  color: #f6f6f6;
 }
 .hr-line1 {
   position: absolute;
@@ -1617,12 +1616,14 @@ h1, h3, p {
   bottom: 55%;
   left: 82%;
   font-size: 22px;
+  color: #f6f6f6;
 }
 
 .next-offer {
   position: absolute;
   bottom: 35%;
   left: 10%;
+  color: #f6f6f6;
 }
 
 .progress {
@@ -1633,7 +1634,6 @@ h1, h3, p {
 .booking-card-container {
   margin-top: 25px;
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
