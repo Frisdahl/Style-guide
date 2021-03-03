@@ -808,7 +808,7 @@
                 <img src="img/calendar.svg">
             </div>
 
-            <div class="reciept-button cancel">
+            <div class="reciept-button cancel" onclick="cancelOrderPopup()">
                 <img src="img/cancel.svg">
             </div>
 
@@ -842,7 +842,23 @@
             </div>
 
         </div>
+
+
+
+
     </section>
+
+    <div id="cancel-popup">
+        <div class="cancel-card">
+
+            <h3>Er du sikker på at du vil afbestille din tid?</h3>
+            <p>Du er ved at aflyse din tid hos Frisør Pelino</p>
+
+            <button onclick="cancelOrderPopup()">Annuller</button>
+            <button onclick="cancelOrder()">Afbestil tid</button>
+
+        </div>
+    </div>
 
 
 
@@ -870,21 +886,27 @@
                     <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
 
                 </div>
+
                 <hr class="line-under-menu">
-                <div class="profile-menu-1">
+
+                <div class="profile-menu-1" onclick="goToGiftcards()">
                     <img class="aftaler" src="img/gift-card-menu.svg" alt="aftaler">
                     <p class="menu-text">Mine Gavekort</p>
                     <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
 
                 </div>
+
                 <hr class="line-under-menu">
-                <div class="profile-menu-1">
+
+                <div class="profile-menu-1" onclick="goToPoints()">
                     <img class="aftaler" src="img/menu-coin.svg" alt="aftaler">
                     <p class="menu-text">Optjente Point</p>
                     <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
 
                 </div>
+
                 <hr class="line-under-menu">
+
                 <div class="profile-menu-1">
                     <img class="aftaler" src="img/menu-credit-card.svg" alt="aftaler">
                     <p class="menu-text">Betalingsmetoder</p>
@@ -969,7 +991,7 @@
                 </div>
 
                 <button class="ændre-tid">Ændre Tid</button>
-                <button class="afbestil-tid">Afbestil tid</button>
+                <button class="afbestil-tid" onclick="cancelOrderPopup()">Afbestil tid</button>
             </div>
 
         </div>
@@ -1070,6 +1092,4 @@
 
 </body>
 
-<script src="js/main.js"></script>
-
-</html>
+<script src="js/main.js"></script></html>

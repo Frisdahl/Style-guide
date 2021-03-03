@@ -366,5 +366,12 @@ function goToConfirmed() {
 }
 
 
+var cancelPopup = document.getElementById("cancel-popup");
+function cancelOrderPopup() {
+    cancelPopup.classList.toggle("active");
+}
 
+function cancelOrder() {
+    cancelPopup.innerHTML = '<div class="cancel-card"><h3>Din tid er nu afbestilt</h3><button class="full-width" onclick="cancelOrderPopup(); goToHome()">Tilbage</button></div>'
+}
 
