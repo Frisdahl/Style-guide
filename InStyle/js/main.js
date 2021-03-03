@@ -131,6 +131,7 @@ function removeActive() {
 
 
 function goToLogIn() {
+    window.scrollTo(0,0);
     location.reload();
 }
 
@@ -410,3 +411,6 @@ console.log(getSnippet("get snippet text using javascript?", 11)); // get snippe
 function recieptPrinter() {
 
 }
+
+
+
