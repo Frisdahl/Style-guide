@@ -1564,7 +1564,7 @@ margin-right: 5%;
 .point-box-container-center {
   display: flex;
   justify-content: center;
-  margin-top: 120px;
+  margin-top: 200px;
 }
 .point-box-container {
   width: 320px;
@@ -1691,16 +1691,18 @@ h1, h3, p {
     left: 10%;
 =======
   position: absolute;
-  top: 31%;
-  right: 22%;
+  top: 32%;
+  right: 20%;
   display: flex;
   flex-direction: row;
 }
 
 .point {
   position: absolute;
-  bottom: 55%;
-  left: 82%;
+  top: 22%;
+  right: 8%;
+  display: flex;
+  flex-direction: row;
   font-size: 22px;
 }
 
@@ -1728,7 +1730,6 @@ h1, h3, p {
 .booking-card-container {
   margin-top: 25px;
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1737,7 +1738,6 @@ h1, h3, p {
 
 }
 .card-booking-2 {
-  width: 300px;;
   height: 100px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin-top: 2%;
@@ -1751,23 +1751,23 @@ h1, h3, p {
 
 }
 
-.title-booking-2 {
-  color: grey;
-  font-size: 14px;
-  position: absolute;
-  top: 60px;
-}
 .title-booking-1 {
   color: grey;
-  font-size: 14px;
-  position: absolute;
-  top: 45%;
+  font-size: 18px;
 }
-.title-booking-4 {
+.title-booking-2 {
   color: grey;
-  font-size: 14px;
+  font-size: 18px;
+  position: absolute;
+
+}
+.title-booking-3 {
+  color: grey;
+  font-size: 18px;
   position: absolute;
   top: 45%;
+  margin-bottom: 30px;
+
 }
 
 .booking-card-container {
