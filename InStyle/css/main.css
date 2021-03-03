@@ -1604,6 +1604,11 @@ input.verification {
 
 
 /* Points styling */
+.point-box-container-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+}
 .point-box-container {
     width: 320px;
     height: 185px;
@@ -1614,7 +1619,10 @@ input.verification {
     transform: translateX(-50%);
 }
 
+
+
 .level {
+<<<<<<< HEAD
     position: absolute;
     top: 10%;
     left: 10%;
@@ -1626,9 +1634,25 @@ input.verification {
     top: 22%;
     left: 10%;
     font-size: 22px;
+=======
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  font-size: 16px;
+  color: #f6f6f6;
+}
+
+.dine-point {
+  position: absolute;
+  bottom: 55%;
+  left: 10%;
+  font-size: 22px;
+  color: #f6f6f6;
+>>>>>>> ab18d80a148de7ba5a00de92a40b71ffe46be03c
 }
 
 .hr-line1 {
+<<<<<<< HEAD
     position: absolute;
     width: 40px;
     background-color: var(--accent);
@@ -1639,9 +1663,22 @@ input.verification {
     top: 27%;
     left: 5%;
     );
+=======
+  position: absolute;
+  width: 40px;
+  background-color: #1B6060;
+  border-radius: 3px;
+  border: 0;
+  height: 4px;
+  transform:translate(-20px, 0) rotate(90deg);
+  top: 27%;
+  left: 5%;
+);
+>>>>>>> ab18d80a148de7ba5a00de92a40b71ffe46be03c
 }
 
 .coin {
+<<<<<<< HEAD
     position: absolute;
     top: 32%;
     right: 20%;
@@ -1662,10 +1699,105 @@ input.verification {
     position: absolute;
     bottom: 25%;
     left: 10%;
+=======
+  position: absolute;
+  top: 31%;
+  right: 22%;
+  display: flex;
+  flex-direction: row;
+}
+
+.point {
+  position: absolute;
+  bottom: 55%;
+  left: 82%;
+  font-size: 22px;
+  color: #f6f6f6;
+}
+
+.next-offer {
+  position: absolute;
+  bottom: 35%;
+  left: 10%;
+  color: #f6f6f6;
+>>>>>>> ab18d80a148de7ba5a00de92a40b71ffe46be03c
 }
 
 .progress {
     position: absolute;
     bottom: 20%;
     left: 10%;
+}
+.booking-card-container {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.card-booking-2 {
+  width: 300px;;
+  height: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 2%;
+  margin-left: 10px;
+  text-align: left;
+  font-family: arial;
+  border-radius: 25px;
+  border: 2px solid #black;
+  padding: 20px;
+  position: relative;
+
+}
+
+.title-booking-2 {
+  color: grey;
+  font-size: 14px;
+  position: absolute;
+  top: 60px;
+}
+.title-booking-1 {
+  color: grey;
+  font-size: 14px;
+  position: absolute;
+  top: 45%;
+}
+.title-booking-4 {
+  color: grey;
+  font-size: 14px;
+  position: absolute;
+  top: 45%;
+}
+
+.booking-card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.booking-overskrift-rød{
+color:#FF5A5A;
+text-align: right;
+font-size: 14px;
+}
+.kryds-1 {
+  position: absolute;
+  top: 20px;
+  left: 8%;
+}
+
+.booking-overskrift{
+color:#4CA64C;
+text-align: right;
+font-size: 14px;
+}
+
+.flueben-1 {
+  position: absolute;
+  top: 15%;
+  left: 2%;
+  width: 20%;
+  height: 20%;
 }
