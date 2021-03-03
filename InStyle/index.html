@@ -93,6 +93,8 @@
 
 
     <section class="signup" id="signup-country">
+        
+        <img class="back-arrow" src="img/arrow-left.png" onclick="goToLogIn()">
 
         <h1>Velkommen til<br><span>InStyle</span></h1>
 
@@ -745,7 +747,7 @@
 
     </section>
 
-    <section id="order-confirmed">
+    <section id="order-confirmed" class="darkpage">
 
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
@@ -758,7 +760,7 @@
 
 
 
-    <section id="order-receipt">
+    <section id="order-receipt" class="darkpage">
 
         <div class="customer-name">
             <img class="bekraeftet-icon" src="img/bekraeftet.png">
@@ -778,7 +780,7 @@
                 </div>
             </a>
 
-            <div class="reciept-button">
+            <div class="reciept-button" onclick="goToMyAppointments()">
                 <img src="img/calendar.svg">
             </div>
 
@@ -828,6 +830,7 @@
 
 
         <div class="edit-profile-container">
+            
             <div class="header-profile-container">
                 <img class="profile-circle" src="img/profile-circle.svg" alt="profilecirce">
                 <p class="profile-pic-text" id="profile-pic-text"></p>
@@ -842,35 +845,45 @@
                     <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
 
                 </div>
+                
                 <hr class="line-under-menu">
-                <div class="profile-menu-1">
+                
+                <div class="profile-menu-1" onclick="goToGiftcards()">
                     <img class="aftaler" src="img/gift-card-menu.svg" alt="aftaler">
                     <p class="menu-text">Mine Gavekort</p>
                     <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
 
                 </div>
+                
                 <hr class="line-under-menu">
-                <div class="profile-menu-1">
+                
+                <div class="profile-menu-1" onclick="goToPoints()">
                     <img class="aftaler" src="img/menu-coin.svg" alt="aftaler">
                     <p class="menu-text">Optjente Point</p>
                     <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
 
                 </div>
+                
                 <hr class="line-under-menu">
-                <div class="profile-menu-1">
+                
+                <div class="profile-menu-1" onclick="alert('mangler')">
                     <img class="aftaler" src="img/menu-credit-card.svg" alt="aftaler">
                     <p class="menu-text">Betalingsmetoder</p>
                     <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
 
                 </div>
+                
                 <hr class="line-under-menu">
-                <div class="profile-menu-1">
+                
+                <div class="profile-menu-1" onclick="alert('mangler')">
                     <img class="aftaler" src="img/menu-information.svg" alt="aftaler">
                     <p class="menu-text">FAQ</p>
                     <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
 
                 </div>
+                
                 <hr class="line-under-menu">
+                
                 <div class="profile-menu-1" onclick="goToLogIn()">
                     <img class="aftaler" src="img/menu-logout.svg" alt="aftaler">
                     <p class="menu-text">Log ud</p>
