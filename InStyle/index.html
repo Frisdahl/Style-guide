@@ -39,7 +39,7 @@
             <img src="img/icon-home.png">
         </div>
 
-        <div id="nav-appointments" onclick="console.log('Appointments')" class="nav-link">
+        <div id="nav-appointments" onclick="goToMyAppointments()" class="nav-link">
             <img src="img/icon-calendar.png">
         </div>
 
@@ -83,11 +83,87 @@
 
             <button type="submit" onclick="login()">Log ind</button>
 
-            <a>Opret bruger</a>
+            <a onclick="goToSignUpCountry()">Opret bruger</a>
 
         </div>
 
     </section>
+
+
+
+
+    <section class="signup" id="signup-country">
+
+        <h1>Velkommen til<br><span>InStyle</span></h1>
+
+        <p>Bekræft din landskode<br>og indsæt dit telefon nummer</p>
+
+        <input class="default" placeholder="Danmark">
+        <input class="default" placeholder="+0045" type="number" maxlength="8">
+
+        <button onclick="goToSignUpVerification()">Næste</button>
+
+    </section>
+
+
+
+
+
+
+
+
+    <section class="signup" id="signup-verification">
+
+        <h1>Indtast din<br><span>verificeringskode</span></h1>
+
+        <p>Bekræft din landskode<br>og indsæt dit telefon nummer</p>
+
+        <div class="verification-container">
+            <input type="number" class="verification" maxlength="1" onkeyup="emulateTab1()">
+            <input type="number" class="verification" maxlength="1" onkeyup="emulateTab2()">
+            <input type="number" class="verification" maxlength="1" onkeyup="emulateTab3()">
+            <input type="number" class="verification" maxlength="1" onkeyup="emulateTab4()">
+            <div id="verification-process"></div>
+        </div>
+
+        <button>Næste</button>
+
+    </section>
+
+
+
+
+
+    <section class="signup" id="signup-name">
+
+        <h1>Opret din<br><span>personlige konto</span></h1>
+
+        <p>Skriv dit fornavn og efternavn,<br>vi kan genkende dig.</p>
+
+        <input id="signUpUsername" class="default" placeholder="Fornavn">
+        <input id="signUpLastname" class="default" placeholder="Efternavn">
+
+        <button onclick="goToSignUpDone()" type="submit">Næste</button>
+
+    </section>
+
+
+
+
+
+
+    <section class="signup" id="signup-done">
+
+        <img src="img/user-icon.png">
+
+        <h1>Hejsa<br><span id="signUpPrintUsername">NAVN</span></h1>
+
+        <p>Vi er glade for at du nu er medlem af InStyle. Vi gør det muligt for dig at bestille og booke tider on the go, nemt og gratis for forbrugeren. </p>
+
+        <button onclick="goToHome()">Lad os komme i gang</button>
+
+    </section>
+
 
 
 
@@ -97,16 +173,187 @@
 
         <h1>Velkommen tilbage<br><span id="welcome-name"></span></h1>
 
-        <div class="card" onclick="goToSearch()">
 
-            <img class="background-image" src="img/hairdresser-1.png">
 
-            <h3>Se frisører</h3>
-            <img class="arrow" src="img/arrow-right.png">
+
+        <div class="page-wrapper">
+            <div class="frontpage-card-container" onclick="goToSearch()">
+                <div class="front-page-card">
+                    <div class="card-number">
+                        <img class="cirlce-1" src="img/top-circle-1.svg" alt="circle">
+                        <h2 class="upperleft-number">9</h2>
+                        <h3 class="plus-icon">+</h3>
+                        <div class="icon-holder">
+                            <img class="icon-holder-icon" src="img/map.svg" alt="kort">
+                        </div>
+
+                    </div>
+                    <div class="frontpage-card-footer">
+                        <h4 class="h4-card">Nærmeste Frisører</h4>
+                        <img class="right-card-arrow" src="img/right-arrow.svg" alt="pil-tilhøjre">
+                    </div>
+                </div>
+            </div>
+
+            <div class="frontpage-card-container" onclick="goToMyAppointments()">
+                <div class="front-page-card">
+                    <div class="card-number">
+                        <img class="cirlce-1" src="img/top-circle-1.svg" alt="circle">
+                        <h2 class="upperleft-number">1</h2>
+                        <h3 class="plus-icon">+</h3>
+                        <div class="icon-holder">
+                            <img class="icon-holder-icon" src="img/calender.svg" alt="kort">
+                        </div>
+
+                    </div>
+                    <div class="frontpage-card-footer">
+                        <h4 class="h4-card">Mine aftaler</h4>
+                        <img class="right-card-arrow" src="img/right-arrow.svg" alt="pil-tilhøjre">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="frontpage-card-container">
+                <div class="front-page-card">
+                    <div class="card-number">
+                        <img class="cirlce-1" src="img/top-circle-1.svg" alt="circle">
+                        <h2 class="upperleft-number">3</h2>
+                        <h3 class="plus-icon"></h3>
+                        <div class="icon-holder">
+                            <img class="icon-holder-icon" src="img/trophy.svg" alt="kort">
+                        </div>
+
+                    </div>
+                    <div class="frontpage-card-footer">
+                        <h4 class="h4-card">Mine favoritter</h4>
+                        <img class="right-card-arrow" src="img/right-arrow.svg" alt="pil-tilhøjre">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="frontpage-card-container" onclick="goToProfile()">
+                <div class="front-page-card">
+                    <div class="card-number">
+                        <img class="cirlce-1" src="img/top-circle-1.svg" alt="circle">
+                        <h2 class="upperleft-number">+</h2>
+                        <h3 class="plus-icon"></h3>
+                        <div class="icon-holder">
+                            <img class="icon-holder-icon" src="img/settings.svg" alt="kort">
+                        </div>
+
+                    </div>
+                    <div class="frontpage-card-footer">
+                        <h4 class="h4-card">Rediger din profil</h4>
+                        <img class="right-card-arrow" src="img/right-arrow.svg" alt="pil-tilhøjre">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="frontpage-card-container" onclick="goToPoints()">
+                <div class="front-page-card">
+                    <div class="card-number">
+                        <img class="cirlce-1" src="img/top-circle-1.svg" alt="circle">
+                        <h2 class="upperleft-number">69</h2>
+                        <h3 class="plus-icon"></h3>
+                        <div class="icon-holder">
+                            <img class="icon-holder-icon" src="img/coin-frontpage.svg" alt="kort">
+                        </div>
+
+                    </div>
+                    <div class="frontpage-card-footer">
+                        <h4 class="h4-card">Optjente Point</h4>
+                        <img class="right-card-arrow" src="img/right-arrow.svg" alt="pil-tilhøjre">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="frontpage-card-container" onclick="goToGiftcards()">
+                <div class="front-page-card">
+                    <div class="card-number">
+                        <img class="cirlce-1" src="img/top-circle-1.svg" alt="circle">
+                        <h2 class="upperleft-number">2</h2>
+                        <h3 class="plus-icon"></h3>
+                        <div class="icon-holder">
+                            <img class="icon-holder-icon" src="img/gift-card.svg" alt="kort">
+                        </div>
+
+                    </div>
+                    <div class="frontpage-card-footer">
+                        <h4 class="h4-card">Mine Gavekort</h4>
+                        <img class="right-card-arrow" src="img/right-arrow.svg" alt="pil-tilhøjre">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+    <section id="giftcards">
+
+        <h1>Mine<br><span>gavekort</span></h1>
+
+        <div class="pagewrapper">
+            <div class="card-minegavekort">
+
+                <div class="card-img-minegavekort">
+                    <img src="img/giftcard-1.png">
+                </div>
+
+                <h3 class="giftcard-h3">Frisør Elegance</h3>
+                <h4 class="giftcard-h4">Penge tilgode</h4>
+                <div class="giftcard-saldo2">
+                    <button class="giftcard-saldo" type="button" name="button">350,-</button>
+                </div>
+
+
+
+
+                <div class="card-prices-minegavekort">
+
+                    <div>
+                        <span class="text-minegavekort">Dato</span>
+                        <span class="price-minegavekort">22/02-21</span>
+                    </div>
+
+                    <div>
+                        <span class="text-minegavekort">Nr.</span>
+                        <span class="price-minegavekort">3242</span>
+                    </div>
+                    <hr class="hr-gavekort">
+                    <img class="barcode-gavekort" src="img/barcode-gavekort.svg" alt="barcode">
+
+
+                </div>
+
+            </div>
 
         </div>
 
+
+
     </section>
+
+
+
+
 
 
 
@@ -166,7 +413,7 @@
             <div class="card">
 
                 <div class="card-img">
-                    <img src="img/hairdresser-1.png">
+                    <img src="img/egualz.jpg">
                 </div>
 
                 <h3>Frisør Egualz</h3>
@@ -207,7 +454,7 @@
             <div class="card">
 
                 <div class="card-img">
-                    <img src="img/hairdresser-1.png">
+                    <img src="img/guldsaks.jpg">
                 </div>
 
                 <h3>Frisøren Guldsaks</h3>
@@ -248,7 +495,7 @@
             <div class="card">
 
                 <div class="card-img">
-                    <img src="img/hairdresser-1.png">
+                    <img src="img/hemmo.jpg">
                 </div>
 
                 <h3>Frisør Viggos</h3>
@@ -513,17 +760,29 @@
 
     <section id="order-receipt">
 
+        <div class="customer-name">
+            <img class="bekraeftet-icon" src="img/bekraeftet.png">
+
+            <h3>Frisør Pelino</h3>
+            <p>Lundsbjergvej 56,<br>Frederiksberg C 1916</p>
+
+        </div>
+
+
+
         <div class="reciept-button-container">
 
-            <div class="reciept-button">
-                <img src="img/location.svg">
-            </div>
+            <a href="https://www.google.com/maps/place/Lupinvej+56,+5210+Odense/@55.4119975,10.3328284,15z/data=!3m1!4b1!4m5!3m4!1s0x464ce078de78555f:0x6c5190ca23122674!8m2!3d55.4119978!4d10.3415617">
+                <div class="reciept-button">
+                    <img src="img/location.svg">
+                </div>
+            </a>
 
             <div class="reciept-button">
                 <img src="img/calendar.svg">
             </div>
 
-            <div class="reciept-button">
+            <div class="reciept-button cancel">
                 <img src="img/cancel.svg">
             </div>
 
@@ -535,7 +794,7 @@
             </div>
 
             <div class="reciept-date">
-                <p id="date-print">://:</p>
+                <p id="date-print"></p>
             </div>
 
             <div class="receipt-main-content-header">
@@ -545,10 +804,7 @@
 
             <div id="receipt-pricelist">
 
-                <<<<<<< HEAD </div>
-                    =======
             </div>
-            >>>>>>> d491ccce80cfd507824cdf082de0b6d375e11cea
 
             <div class="receipt-footer">
                 <h2>Total pris:</h2>
@@ -563,83 +819,261 @@
     </section>
 
 
+
+
+
+
+
     <section id="profile-page">
 
 
         <div class="edit-profile-container">
-            <<<<<<< HEAD <div class="header-profile-container">
+            <div class="header-profile-container">
                 <img class="profile-circle" src="img/profile-circle.svg" alt="profilecirce">
-                <p class="profile-pic-text" id="profile-pic-text">D</p>
+                <p class="profile-pic-text" id="profile-pic-text"></p>
+            </div>
+            <p class="profile-name" id="profile-name">Dennis Hansen</p>
+            <p class="upload-profile-pic" id="upload-profile-pic">Upload Profile Picture</p>
+            <div class="menu-profile-container">
+
+                <div class="profile-menu-1" onclick="goToMyAppointments()">
+                    <img class="aftaler" src="img/aftaler.svg" alt="aftaler">
+                    <p class="menu-text">Mine aftaler</p>
+                    <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
+
+                </div>
+                <hr class="line-under-menu">
+                <div class="profile-menu-1">
+                    <img class="aftaler" src="img/gift-card-menu.svg" alt="aftaler">
+                    <p class="menu-text">Mine Gavekort</p>
+                    <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
+
+                </div>
+                <hr class="line-under-menu">
+                <div class="profile-menu-1">
+                    <img class="aftaler" src="img/menu-coin.svg" alt="aftaler">
+                    <p class="menu-text">Optjente Point</p>
+                    <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
+
+                </div>
+                <hr class="line-under-menu">
+                <div class="profile-menu-1">
+                    <img class="aftaler" src="img/menu-credit-card.svg" alt="aftaler">
+                    <p class="menu-text">Betalingsmetoder</p>
+                    <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
+
+                </div>
+                <hr class="line-under-menu">
+                <div class="profile-menu-1">
+                    <img class="aftaler" src="img/menu-information.svg" alt="aftaler">
+                    <p class="menu-text">FAQ</p>
+                    <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
+
+                </div>
+                <hr class="line-under-menu">
+                <div class="profile-menu-1" onclick="goToLogIn()">
+                    <img class="aftaler" src="img/menu-logout.svg" alt="aftaler">
+                    <p class="menu-text">Log ud</p>
+                    <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
+
+                </div>
+                <hr class="line-under-menu">
+            </div>
+
+
+
         </div>
-        <p class="profile-name" id="profile-name">Dennis Hansen</p>
-        <p class="upload-profile-pic" id="upload-profile-pic">Upload Profile Picture</p>
-        <div class="menu-profile-container">
-            <div class="profile-menu-1">
-                <img class="aftaler" src="img/aftaler.svg" alt="aftaler">
-                <p class="menu-text">Mine aftaler</p>
-                <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
-
-            </div>
-            <hr class="line-under-menu">
-            <div class="profile-menu-1">
-                <img class="aftaler" src="img/gift-card-menu.svg" alt="aftaler">
-                <p class="menu-text">Mine Gavekort</p>
-                <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
-                =======
-                <div class="header-profile-container">
-                    <img class="profile-circle" src="img/profile-circle.svg" alt="profilecirce">
-                    <p class="profile-pic-text" id="profile-pic-text">D</p>
-                </div>
-                <p class="profile-name" id="profile-name">Dennis Hansen</p>
-                <p class="upload-profile-pic" id="upload-profile-pic">Upload Profile Picture</p>
-                <div class="menu-profile-container">
-                    <div class="profile-menu-1">
-                        <img class="aftaler" src="img/aftaler.svg" alt="aftaler">
-                        <p class="menu-text">Mine aftaler</p>
-                        <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
-
-                    </div>
-                    <hr class="line-under-menu">
-                    <div class="profile-menu-1" onclick="goToMineaftaler">
-                        <img class="aftaler" src="img/gift-card-menu.svg" alt="aftaler">
-                        <p class="menu-text">Mine Gavekort</p>
-                        <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
-
-                    </div>
-                    <hr class="line-under-menu">
-                    <div class="profile-menu-1" onclick="goToPoint">
-                        <img class="aftaler" src="img/menu-coin.svg" alt="aftaler">
-                        <p class="menu-text">Optjente Point</p>
-                        <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
-
-                    </div>
-                    <hr class="line-under-menu">
-                    <div class="profile-menu-1" onclick="goToPayment">
-                        <img class="aftaler" src="img/menu-credit-card.svg" alt="aftaler">
-                        <p class="menu-text">Betalingsmetoder</p>
-                        <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
-
-                    </div>
-                    <hr class="line-under-menu">
-                    <div class="profile-menu-1" onclick="goToFaq">>
-                        <img class="aftaler" src="img/menu-information.svg" alt="aftaler">
-                        <p class="menu-text">FAQ</p>
-                        <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
-
-                    </div>
-                    <hr class="line-under-menu">
-                    <div class="profile-menu-1" onclick="goToLoadinScreen">>
-                        <img class="aftaler" src="img/menu-logout.svg" alt="aftaler">
-                        <p class="menu-text">Log ud</p>
-                        <img class="menu-right-arrow" src="img/right-arrow.svg" alt="pil til højre">
-
-                    </div>
-                    <hr class="line-under-menu">
-                </div>
-            </div>
 
 
     </section>
+
+
+
+
+
+
+
+    <section id="my-appointments">
+
+
+        <div class="pagewrapper">
+            <h1>Mine<br><span>aftaler</span></h1>
+            <div class="card-mineaftaler">
+
+                <div class="card-img-mineaftaler">
+                    <img src="img/hairdresser-1.png">
+                </div>
+
+                <h3>Frisør Egualz</h3>
+
+                <div></div>
+
+                <div class="card-stars-mineaftaler">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <span>(233)</span>
+                </div>
+
+                <div class="card-distance-mineaftaler">
+                    <img src="img/distance.png">
+                    <span>0,2 km</span>
+                </div>
+
+                <div class="card-prices-mineaftaler">
+
+                    <div>
+                        <span>Dato</span>
+                        <span class="price-mineaftaler">22/02-21</span>
+                    </div>
+
+                    <div>
+                        <span>Tid</span>
+                        <span class="price-mineaftaler">14:30</span>
+                    </div>
+
+                </div>
+
+                <button class="ændre-tid">Ændre Tid</button>
+                <button class="afbestil-tid">Afbestil tid</button>
+            </div>
+            <div class="card-mineaftaler">
+
+                <div class="card-img-mineaftaler">
+                    <img src="img/hairdresser-1.png">
+                </div>
+
+                <h3>Frisør Egualz</h3>
+
+                <div></div>
+
+                <div class="card-stars-mineaftaler">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <span>(233)</span>
+                </div>
+
+                <div class="card-distance-mineaftaler">
+                    <img src="img/distance.png">
+                    <span>0,2 km</span>
+                </div>
+
+                <div class="card-prices-mineaftaler">
+
+                    <div>
+                        <span>Dato</span>
+                        <span class="price-mineaftaler">22/02-21</span>
+                    </div>
+
+                    <div>
+                        <span>Tid</span>
+                        <span class="price-mineaftaler">14:30</span>
+                    </div>
+
+                </div>
+
+                <button class="ændre-tid">Ændre Tid</button>
+                <button class="afbestil-tid">Afbestil tid</button>
+            </div>
+            <div class="card-mineaftaler">
+
+                <div class="card-img-mineaftaler">
+                    <img src="img/hairdresser-1.png">
+                </div>
+
+                <h3>Frisør Egualz</h3>
+
+                <div></div>
+
+                <div class="card-stars-mineaftaler">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <span>(233)</span>
+                </div>
+
+                <div class="card-distance-mineaftaler">
+                    <img src="img/distance.png">
+                    <span>0,2 km</span>
+                </div>
+
+                <div class="card-prices-mineaftaler">
+
+                    <div>
+                        <span>Dato</span>
+                        <span class="price-mineaftaler">22/02-21</span>
+                    </div>
+
+                    <div>
+                        <span>Tid</span>
+                        <span class="price-mineaftaler">14:30</span>
+                    </div>
+
+                </div>
+
+                <button class="ændre-tid">Ændre Tid</button>
+                <button class="afbestil-tid">Afbestil tid</button>
+            </div>
+            <div class="card-mineaftaler">
+
+                <div class="card-img-mineaftaler">
+                    <img src="img/hairdresser-1.png">
+                </div>
+
+                <h3>Frisør Egualz</h3>
+
+                <div></div>
+
+                <div class="card-stars-mineaftaler">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <img class="star" src="img/star-active.png">
+                    <span>(233)</span>
+                </div>
+
+                <div class="card-distance-mineaftaler">
+                    <img src="img/distance.png">
+                    <span>0,2 km</span>
+                </div>
+
+                <div class="card-prices-mineaftaler">
+
+                    <div>
+                        <span>Dato</span>
+                        <span class="price-mineaftaler">22/02-21</span>
+                    </div>
+
+                    <div>
+                        <span>Tid</span>
+                        <span class="price-mineaftaler">14:30</span>
+                    </div>
+
+                </div>
+
+                <button class="ændre-tid">Ændre Tid</button>
+                <button class="afbestil-tid">Afbestil tid</button>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
 
     <section id="card">
 
@@ -660,7 +1094,6 @@
                 </div>
 
             </div>
-            >>>>>>> d491ccce80cfd507824cdf082de0b6d375e11cea
 
         </div>
         <hr class="line-under-menu">
@@ -715,19 +1148,85 @@
                 </div>
 
             </div>
-            
-        </div>
-        
-    </section>
-            
 
-            
-            
-            
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <section id="my-points">
+
+
+
+        <div class="card">
+            <h3>Ikke afholdt booking</h3>
+            <h1>-15 P</h1>
+            <p class="title">Frisør Egualz, Wichmannsgade 7C
+                <br>
+                Odense, 5000 C
+            </p>
+            <p>20/02-2021</p>
+            <img class="flueben" src="img/kryds.svg" alt="cancelled">
+            <br><br>
+            <p><button>Detaljer</button></p>
+        </div>
+
+        <div class="card">
+            <h3>Gennemført Klip</h3>
+            <h1>+10 P</h1>
+            <p class="title">Frisør Måne, Thingholmsgade 3, 1.tv
+                <br>
+                Odense, 5000 C
+            </p>
+            <p>20/02-2021</p>
+            <img class="flueben" src="img/flueben.svg" alt="gennemfert">
+            <br><br>
+            <p><button>Detaljer</button></p>
+        </div>
+
+        <div class="card">
+            <h3>Gennemført Klip</h3>
+            <h1>+10 P</h1>
+            <p class="title">Frisør Hemmo, Hansesgade 48
+                <br>
+                Odense, 5000 C
+            </p>
+            <p>20/02-2021</p>
+            <img class="flueben" src="img/flueben.svg" alt="gennemfert">
+            <br><br>
+            <p><button>Detaljer</button></p>
+        </div>
+
+        <div class="card">
+            <h3>Gennemført Klip</h3>
+            <h1>+10 P</h1>
+            <p class="title">Frisøren Guldsaks, Toldbodgade 3B
+                <br>
+                Odense, 5000 C
+            </p>
+            <p>20/02-2021</p>
+            <img class="flueben" src="img/flueben.svg" alt="gennemfert">
+            <br><br>
+            <p><button>Detaljer</button></p>
+        </div>
+
+
+
+    </section>
+
+
+
+
+
 
 
 </body>
 
-<script src="js/main.js"></script>
-
-</html>
+<script src="js/main.js"></script></html>

@@ -8,7 +8,14 @@ var dateSelect = document.getElementById("date-select");
 var timeSelect = document.getElementById("time-select");
 var orderConfirmed = document.getElementById("order-confirmed");
 var orderReceipt = document.getElementById("order-receipt");
-var profileScreen = document.getElementById("profile-page")
+var profileScreen = document.getElementById("profile-page");
+var SignUpCountry = document.getElementById("signup-country");
+var SignUpVerification = document.getElementById("signup-verification");
+var SignUpName = document.getElementById("signup-name");
+var SignUpDone = document.getElementById("signup-done");
+var myAppointments = document.getElementById("my-appointments");
+var giftcards = document.getElementById("giftcards");
+var myPoints = document.getElementById("my-points");
 
 
 
@@ -21,7 +28,11 @@ var customer6 = document.getElementById("customer6");
 var customer7 = document.getElementById("customer7");
 var customer8 = document.getElementById("customer8");
 
-var headerLogo = document.getElementById("header-logo")
+var headerLogo = document.getElementById("header-logo");
+
+
+// Insert name homescreen
+var insertNameHome = document.getElementById("welcome-name");
 
 
 // Load In Fade
@@ -84,12 +95,10 @@ function login() {
 
         // 02 Skift sektion hvis success
 
-        var insertName = document.getElementById("welcome-name");
-
         loginScreen.classList.remove("active-section");
         homeScreen.classList.add("active-section");
 
-        insertName.innerHTML = username;
+        insertNameHome.innerHTML = username;
 
     } else {
 
@@ -98,14 +107,6 @@ function login() {
         console.log("wrong");
 
     }
-
-
-
-
-
-
-
-
 
 }
 
@@ -124,10 +125,14 @@ function test() {
 function removeActive() {
     var currentActive = document.querySelector(".active-section");
     currentActive.classList.remove("active-section");
+    window.scrollTo(0,0);
 }
 
 
 
+function goToLogIn() {
+    location.reload();
+}
 
 /* Returns user to homescreen */
 function goToHome() {
@@ -146,12 +151,109 @@ function goToSearch() {
     search.classList.add("active-section");
 }
 
+function goToMyAppointments() {
+    removeActive();
+    myAppointments.classList.add("active-section");
+}
+
+function goToGiftcards() {
+    removeActive();
+    giftcards.classList.add("active-section");
+}
+
+function goToPoints() {
+    removeActive();
+    myPoints.classList.add("active-section");
+}
+
 
 
 function goToCustomer1() {
     removeActive();
     customer1.classList.add("active-section");
 }
+
+function goToSignUpCountry() {
+    removeActive();
+    SignUpCountry.classList.add("active-section");
+}
+
+function goToSignUpVerification() {
+    removeActive();
+    SignUpVerification.classList.add("active-section");
+    
+    var verificationInputs = document.querySelectorAll("#signup-verification input");
+    console.log(verificationInputs);
+    verificationInputs[0].focus();
+}
+
+function goToSignUpName() {
+    removeActive();
+    SignUpName.classList.add("active-section");
+}
+
+function goToSignUpDone() {
+    var username = document.getElementById("signUpUsername").value;
+    var userLastname = document.getElementById("signUpLastname").value;
+    var signUpDoneUsernamePrint = document.getElementById("signUpPrintUsername");
+    var profilePageUsername = document.getElementById("profile-name");
+    
+    insertNameHome.innerHTML = username;
+    signUpDoneUsernamePrint.innerHTML = username;
+    profilePageUsername.innerHTML = username + " " + userLastname;
+    
+    removeActive();
+    SignUpDone.classList.add("active-section");
+}
+
+
+
+
+
+/* Emulering af TAB - kan forbedres, skal forbedres - burde laves med en loop i stedet */
+
+var verificationProcess = document.getElementById("verification-process");
+
+
+
+function emulateTab1() {
+    var verificationInputs = document.querySelectorAll("#signup-verification input");
+    verificationInputs[1].focus();
+    verificationInputs[0].classList.add("filled-input");
+    
+    verificationProcess.style.width = '58px';
+    
+}
+
+function emulateTab2() {
+    var verificationInputs = document.querySelectorAll("#signup-verification input");
+    verificationInputs[2].focus();
+    verificationInputs[1].classList.add("filled-input");
+    
+    verificationProcess.style.width = '116px';
+}
+
+function emulateTab3() {
+    var verificationInputs = document.querySelectorAll("#signup-verification input");
+    verificationInputs[3].focus();
+    verificationInputs[2].classList.add("filled-input");
+    
+    verificationProcess.style.width = '174px';
+}
+
+function emulateTab4() {
+    var verificationInputs = document.querySelectorAll("#signup-verification input");
+    verificationInputs[3].classList.add("filled-input");
+    
+    goToSignUpName();
+}
+
+
+
+
+
+
+
 
 
 
@@ -176,11 +278,13 @@ function goToDateSelect() {
 /* Calendar Script */
 
 let myCalendar = new VanillaCalendar({
+
     selector: "#myCalendar",
     pastDates: false,
     months: ['Januar', 'Februar', 'Marts', 'April', 'Maj', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'December'],
     shortWeekday: ['Søn', 'Man', 'Tir', 'Ons', 'Tor', 'Fre', 'Lør'],
-    onSelect: (data, elem) => {},
+    onSelect: (data, elem) => {}
+
 });
 
 
@@ -198,6 +302,7 @@ function goToTimeSelect() {
     console.log(activeCalendarDate.dataset.calendarDate);
 
 }
+
 
 var selectedTime = "";
 
@@ -240,7 +345,7 @@ function goToConfirmed() {
     console.log(getSnippet(activeCalendarDate.dataset.calendarDate, 9)); // get
 
 
-    datePrint.innerHTML = getSnippet(activeCalendarDate.dataset.calendarDate, 9) + " Kl. " + selectedTime.value;
+    datePrint.innerHTML = getSnippet(activeCalendarDate.dataset.calendarDate, 9) + "<br>Kl. " + selectedTime.value;
 
 
     // Sorts prices from services
@@ -291,9 +396,11 @@ function goToConfirmed() {
 
 // Brug til dato for at forkorte dag, måned dato
 function getSnippet(text, length) {
+
     var rx = new RegExp("^.{" + length + "}[^ ]*");
     return rx.exec(text)[0];
 }
+
 console.log(getSnippet("get snippet text using javascript?", 1)); // get
 console.log(getSnippet("get snippet text using javascript?", 3)); // get
 console.log(getSnippet("get snippet text using javascript?", 10)); // get snippet
@@ -303,8 +410,3 @@ console.log(getSnippet("get snippet text using javascript?", 11)); // get snippe
 function recieptPrinter() {
 
 }
-
-
-
-
-
