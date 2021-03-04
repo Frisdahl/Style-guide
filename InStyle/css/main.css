@@ -1641,74 +1641,73 @@ margin-right: 5%;
   bottom: 15%;
   left: 13%;
 }
-.booking-card-container {
-  margin-top: 25px;
-  width: 100%;
+
+.card-point-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+
 }
-.card-booking-2 {
-  height: 100px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin-top: 2%;
-  margin-left: 10px;
-  text-align: left;
-  font-family: arial;
-  border-radius: 25px;
-  border: 2px solid var(--dark);
-  padding: 20px;
+.card-point {
+  margin-top: 40px;
+  width: 320px;
+  height: 150px;
+  box-shadow: 3px 6px 8px rgba(0,0,0,0.2);
+  border-radius: 20px;
   position: relative;
 }
-
-.title-booking-1 {
-  color: grey;
-  font-size: 18px;
-}
-.title-booking-2 {
-  color: grey;
-  font-size: 18px;
+.point-text-card-canceled {
   position: absolute;
-
-}
-.title-booking-3 {
-  color: grey;
-  font-size: 18px;
-  position: absolute;
-  top: 45%;
-  margin-bottom: 30px;
-}
-
-.booking-card-container {
-  display: flex;
-  justify-content: center;
-}
-
-.booking-overskrift-rød{
-color:var(--error);
-text-align: right;
-font-size: 14px;
-}
-.kryds-1 {
-  position: absolute;
-  top: 20px;
   left: 8%;
-}
-
-.booking-overskrift{
-color:#4CA64C;
-text-align: right;
-font-size: 14px;
-}
-
-.flueben-1 {
-  position: absolute;
   top: 15%;
-  left: 2%;
-  width: 20%;
-  height: 20%;
+  color: #FF3A41;
+  margin-top: 0px;
+}
+.card-booking-status-canceled{
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  font-size: 16px;
+  color: #FF3A41;
+}
+.frisør-name-canceled {
+  position: absolute;
+  bottom: 17%;
+  left: 10%;
+  font-size: 16px;
+  color: #FF3A41;
+  font-weight: 700;
+}
+.aflyst-icon {
+  position: absolute;
+  bottom: 17%;
+  right: 10%;
+}
+.point-text-card {
+  position: absolute;
+  left: 8%;
+  top: 15%;
+  color: #247B7B;
+  margin-top: 0px;
+}
+.card-booking-status {
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  font-size: 16px;
+  color: #247B7B;
+}
+.bekræftet-icon {
+  position: absolute;
+  bottom: 17%;
+  right: 10%;
+}
+.frisør-name {
+  position: absolute;
+  bottom: 17%;
+  left: 10%;
+  font-size: 16px;
+  color: #247B7B;
+  font-weight: 700;
 }
 
 
