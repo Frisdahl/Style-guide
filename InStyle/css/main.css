@@ -100,10 +100,10 @@ body {
 
 section {
     width: 100%;
-    min-height: 100vh;
     display: none;
     transition: .2s;
     z-index: 1;
+    padding-bottom: 105px;
 }
 
 .active-section {
@@ -113,7 +113,7 @@ section {
 
 #header-logo {
     width: 170px;
-    position: fixed;
+    position: absolute;
     transform: translate(-50%);
     top: 50px;
     left: 50%;
@@ -132,6 +132,13 @@ section {
 
 .fadein {
     opacity: 1 !important;
+}
+
+.backarrow {
+    height: 16px;
+    position: absolute;
+    top: 58px;
+    left: 30px;
 }
 
 
@@ -171,6 +178,8 @@ section {
 
 
 
+
+
 /* Input Styling */
 
 input.default {
@@ -199,7 +208,7 @@ input:focus {
     height: 48px;
     position: absolute;
     top: 150px;
-    right: 0;
+    right: 15px;
     transform: translateX(-50%);
 }
 
@@ -518,7 +527,6 @@ button:active {
 }
 .page-wrapper {
   width: 100%;
-  height: 100vh;
   display:flex;
   flex-direction: column;
 }
@@ -751,10 +759,17 @@ img.circle-1 {
 #order-confirmed h1 {
     position: absolute;
     top: 80%;
-    color: var(--light);
+    color: var(--accent);
     text-align: center;
 }
 
+#order-confirmed h1 span {
+    color: var(--light);
+}
+
+.darksection {
+    height: 100vh;
+}
 
 
 
@@ -1046,7 +1061,7 @@ justify-content: center;
     margin-bottom: 15px;
 }
 
-#signup-done img {
+#signup-done .profile-picture {
     width: 200px;
     position: relative;
     margin-left: calc(50% - 30px);
@@ -1116,10 +1131,6 @@ input.verification {
 
 }
 
-#my-appointments h1 {
-    margin-bottom: 30px;
-}
-
 
 .card-mineaftaler {
   height: 440px;
@@ -1133,7 +1144,7 @@ input.verification {
     cursor: pointer;
     position: relative;
     margin-bottom: 25px;
-    background: #F6F6f6;
+    background: #FFF;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -1222,15 +1233,16 @@ input.verification {
     width: 100%;
     margin-top: 20px;
     padding: 0;
+    background: #FFF;
 }
 .ændre-tid {
   height: 40px;
   border-radius: 10px;
   border: 0;
-  background-color: #F6F6F6;
-  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  background-color: var(--light);
+  box-shadow: 0px 3px 6px 0px var(--shadow);
   font-weight: bold;
-  color: #247B7B;
+  color: var(--accent);
 
 }
 
@@ -1238,10 +1250,10 @@ input.verification {
   height: 40px;
   border-radius: 10px;
   border: 0;
-  background-color: #F6F6F6;
-  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  background-color: var(--light);
+  box-shadow: 0px 3px 6px 0px var(--shadow);
   font-weight: bold;
-  color: #A21C2E;
+  color: var(--error);
 }
 
 .card.servicelist {
@@ -1276,7 +1288,7 @@ input.verification {
     cursor: pointer;
     position: relative;
     margin-bottom: 25px;
-    background: #F6F6f6;
+    background: var(--light);
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -1377,10 +1389,10 @@ input.verification {
   height: 40px;
   border-radius: 10px;
   border: 0;
-  background-color: #F6F6F6;
+  background-color: var(--light);
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
   font-weight: bold;
-  color: #247B7B;
+  color: var(--accent);
 
 }
 
@@ -1388,7 +1400,7 @@ input.verification {
   height: 40px;
   border-radius: 10px;
   border: 0;
-  background-color: #F6F6F6;
+  background-color: var(--light);
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
   font-weight: bold;
   colo3r: #A21C2E;
@@ -1431,7 +1443,7 @@ input.verification {
   height: 40px;
   border-radius: 10px;
   border: 0;
-  color: #f6f6f6;
+  color: var(--light);
   font-size: 16px;
   font-weight: 32px;
 
@@ -1549,4 +1561,404 @@ margin-right: 5%;
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   padding: 0.5em 1em;
   text-align:center;
+}
+
+
+
+
+
+
+/* Points styling */
+.point-box-container-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+.point-box-container {
+  width: 320px;
+  height: 185px;
+  background-color: var(--accent);
+  border-radius: 40px;
+  position: relative;
+}
+
+.level {
+    position: absolute;
+    top: 20%;
+    left: 13%;
+    font-size: 16px;
+    color: var(--light);
+    line-height: 14px;
+
+}
+
+.dine-point {
+    position: absolute;
+    bottom: 55%;
+    left: 13%;
+    font-size: 22px;
+    color: var(--light);
+    line-height: 35px;
+}
+.hr-line1 {
+    position: absolute;
+    width: 40px;
+    background-color: #1B6060;
+    border-radius: 3px;
+    border: 0;
+    height: 4px;
+    transform: translate(-20px, 0) rotate(90deg);
+    top: 31%;
+    left: 10%;
+  }
+.coin {
+
+    position: absolute;
+    top: 32%;
+    right: 25%;
+    display: flex;
+    flex-direction: row;
+}
+.next-offer {
+    position: absolute;
+    bottom: 29%;
+    left: 13%;
+    font-size: 16px;
+    color: var(--light);
+}
+.point {
+  position: absolute;
+  bottom: 54%;
+  left: 80%;
+  display: flex;
+  flex-direction: row;
+  font-size: 22px;
+  color: var(--light);
+}
+
+.progress {
+  position: absolute;
+  bottom: 15%;
+  left: 13%;
+}
+
+.card-point-container {
+  display: flex;
+  justify-content: center;
+
+}
+.card-point {
+  margin-top: 40px;
+  width: 320px;
+  height: 150px;
+  box-shadow: 3px 6px 8px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  position: relative;
+}
+.point-text-card-canceled {
+  position: absolute;
+  left: 8%;
+  top: 15%;
+  color: #FF3A41;
+  margin-top: 0px;
+}
+.card-booking-status-canceled{
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  font-size: 16px;
+  color: #FF3A41;
+}
+.frisør-name-canceled {
+  position: absolute;
+  bottom: 17%;
+  left: 10%;
+  font-size: 16px;
+  color: #FF3A41;
+  font-weight: 700;
+}
+.aflyst-icon {
+  position: absolute;
+  bottom: 17%;
+  right: 10%;
+}
+.point-text-card {
+  position: absolute;
+  left: 8%;
+  top: 15%;
+  color: #247B7B;
+  margin-top: 0px;
+}
+.card-booking-status {
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  font-size: 16px;
+  color: #247B7B;
+}
+.bekræftet-icon {
+  position: absolute;
+  bottom: 17%;
+  right: 10%;
+}
+.frisør-name {
+  position: absolute;
+  bottom: 17%;
+  left: 10%;
+  font-size: 16px;
+  color: #247B7B;
+  font-weight: 700;
+}
+
+
+
+
+/* Cancel Popup Styling */
+
+#cancel-popup {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    background: RGBA(15,24,40,.3);
+    position: absolute;
+    z-index: 2;
+    display: none;
+}
+
+.cancel-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #FFF;
+    border-radius: 10px;
+    padding: 10px;
+    width: 340px;
+    text-align: center;
+}
+
+.cancel-card h3 {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.cancel-card p {
+    font-size: 14px;
+}
+
+.cancel-card button {
+    width: 50%;
+    float: left;
+    background: transparent;
+    color: var(--dark);
+    text-transform: inherit;
+    border-radius: 0;
+    margin-top: 15px;
+}
+
+.cancel-card button.full-width {
+    width: 100%;
+    border-left: 0 !important;
+}
+
+.cancel-card button:last-of-type {
+    color: var(--error);
+    border-left: 1px solid var(--shadow);
+}
+
+.active {
+    display: block !important;
+}
+
+.star-favorite-container{
+  height: 35px;
+  width: 35px;
+  background-color: #ffffff;
+  z-index: 1;
+  position: absolute;
+  right: 75px;
+  top: 10px;
+  border-radius: 5px;
+}
+
+<<<<<<< HEAD
+
+
+
+
+
+/* FAQ Styling */
+.faq-h2-text {
+  margin: 130px auto 60px 30px;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: left;
+}
+details {
+  width: 75%;
+  min-height: 5px;
+  max-width: 400px;
+    width: 340px;
+  padding: 35px 35px 35px 35px;
+  margin: 0 auto;
+  position: relative;
+  font-size: 18px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  transition: all .3s;
+  outline: none;
+  background-color: #f9f9f9;
+  box-shadow: 2px 3px 18px rgba(0,0,0,0.2);
+}
+details + details {
+  margin-top: 20px;
+}
+.paragraph-faq {
+  color: #96999d;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+
+}
+.summary-faq {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+summary:focus {
+  outline: none;
+}
+summary::-webkit-details-marker {
+  display: none
+}
+
+
+
+
+
+/* Betalingsmetoder Styling */
+.pagewrapper-betalingsmetoder {
+  width: 100%;
+  height: 100vh;
+
+}
+.betalingsmetoder-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  position: relative;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 30px;
+    margin-left: 30px;
+
+}
+.betalingsmetoder-header img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+    margin-top: 50px;
+
+}
+
+.betalingsmetoder-header h2 {
+  font-size: 26px;
+    margin-top: 50px;
+}
+
+.Choose {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+    margin-left: 30px;
+  font-size: 20px;
+}
+
+.radiobuttons {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width:100%;
+}
+
+.betalingsmetode-card {
+width: 350px;
+height: 60px;
+background-color: #FFF;
+box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+display: flex;
+border-radius: 10px;
+align-items: center;
+margin-bottom: 30px;
+margin-top: 30px;
+}
+.betalingsmetode-card > input {
+  margin-left: 30px;
+}
+.betalingsmetode-card > span {
+  margin-left: 20px;
+}
+.betalingsmetode-card2 > input {
+  margin-left: 30px;
+}
+.betalingsmetode-card2 > span {
+  margin-left: 20px;
+}
+.betalingsmetode-card3 > input {
+  margin-left: 30px;
+}
+.betalingsmetode-card3 > span {
+  margin-left: 20px;
+}
+.betalingsmetode-card4 > input {
+  margin-left: 30px;
+}
+.betalingsmetode-card4 > span {
+  margin-left: 20px;
+}
+.betalingsmetode-card2 {
+width: 350px;
+height: 60px;
+background-color: #FFF;
+box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+display: flex;
+align-items: center;
+margin-bottom: 30px;
+border-radius: 10px;
+}
+
+.betalingsmetode-card3 {
+width: 350px;
+height: 60px;
+background-color: #FFF;
+box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+display: flex;
+align-items: center;
+margin-bottom: 30px;
+border-radius: 10px;
+
+}
+.betalingsmetode-card4 {
+width: 350px;
+height: 60px;
+background-color: #FFF;
+box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+display: flex;
+align-items: center;
+margin-bottom: 30px;
+border-radius: 10px;
+
+}
+
+
+
+
+.star-favorite-container img{
+  width: 100%;
 }
