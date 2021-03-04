@@ -1587,6 +1587,9 @@ margin-right: 5%;
     top: 20%;
     left: 13%;
     font-size: 16px;
+    color: var(--light);
+    line-height: 14px;
+
 }
 
 .dine-point {
@@ -1594,6 +1597,8 @@ margin-right: 5%;
     bottom: 55%;
     left: 13%;
     font-size: 22px;
+    color: var(--light);
+    line-height: 35px;
 }
 .hr-line1 {
     position: absolute;
@@ -1616,8 +1621,10 @@ margin-right: 5%;
 }
 .next-offer {
     position: absolute;
-    bottom: 27%;
+    bottom: 29%;
     left: 13%;
+    font-size: 16px;
+    color: var(--light);
 }
 .point {
   position: absolute;
@@ -1626,6 +1633,7 @@ margin-right: 5%;
   display: flex;
   flex-direction: row;
   font-size: 22px;
+  color: var(--light);
 }
 
 .progress {
@@ -1955,4 +1963,3 @@ border-radius: 10px;
 .star-favorite-container img{
   width: 100%;
 }
-
