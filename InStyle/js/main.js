@@ -16,6 +16,8 @@ var SignUpDone = document.getElementById("signup-done");
 var myAppointments = document.getElementById("my-appointments");
 var giftcards = document.getElementById("giftcards");
 var myPoints = document.getElementById("my-points");
+var FAQ = document.getElementById("faq");
+var paymentMethods = document.getElementById("betalings-metoder");
 
 
 
@@ -198,6 +200,22 @@ function goToSignUpDone() {
     removeActive();
     SignUpDone.classList.add("active-section");
 }
+
+
+function goToFAQ() {
+    removeActive();
+    FAQ.classList.add("active-section");
+}
+
+function goToPaymentMethods() {
+    removeActive();
+    paymentMethods.classList.add("active-section");
+}
+
+
+
+
+
 
 /* Emulering af TAB - kan forbedres, skal forbedres - burde laves med en loop i stedet */
 

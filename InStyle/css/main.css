@@ -1767,3 +1767,176 @@ font-size: 14px;
 
 
 
+
+
+/* FAQ Styling */
+.faq-h2-text {
+  margin: 130px auto 60px 30px;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: left;
+}
+details {
+  width: 75%;
+  min-height: 5px;
+  max-width: 400px;
+    width: 340px;
+  padding: 35px 35px 35px 35px;
+  margin: 0 auto;
+  position: relative;
+  font-size: 18px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  transition: all .3s;
+  outline: none;
+  background-color: #f9f9f9;
+  box-shadow: 2px 3px 18px rgba(0,0,0,0.2);
+}
+details + details {
+  margin-top: 20px;
+}
+.paragraph-faq {
+  color: #96999d;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+
+}
+.summary-faq {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+summary:focus {
+  outline: none;
+}
+summary::-webkit-details-marker {
+  display: none
+}
+
+
+
+
+
+/* Betalingsmetoder Styling */
+.pagewrapper-betalingsmetoder {
+  width: 100%;
+  height: 100vh;
+
+}
+.betalingsmetoder-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  position: relative;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 30px;
+    margin-left: 30px;
+
+}
+.betalingsmetoder-header img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+    margin-top: 50px;
+
+}
+
+.betalingsmetoder-header h2 {
+  font-size: 26px;
+    margin-top: 50px;
+}
+
+.Choose {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+    margin-left: 30px;
+  font-size: 20px;
+}
+
+.radiobuttons {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width:100%;
+}
+
+.betalingsmetode-card {
+width: 350px;
+height: 60px;
+background-color: #FFF;
+box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+display: flex;
+border-radius: 10px;
+align-items: center;
+margin-bottom: 30px;
+margin-top: 30px;
+}
+.betalingsmetode-card > input {
+  margin-left: 30px;
+}
+.betalingsmetode-card > span {
+  margin-left: 20px;
+}
+.betalingsmetode-card2 > input {
+  margin-left: 30px;
+}
+.betalingsmetode-card2 > span {
+  margin-left: 20px;
+}
+.betalingsmetode-card3 > input {
+  margin-left: 30px;
+}
+.betalingsmetode-card3 > span {
+  margin-left: 20px;
+}
+.betalingsmetode-card4 > input {
+  margin-left: 30px;
+}
+.betalingsmetode-card4 > span {
+  margin-left: 20px;
+}
+.betalingsmetode-card2 {
+width: 350px;
+height: 60px;
+background-color: #FFF;
+box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+display: flex;
+align-items: center;
+margin-bottom: 30px;
+border-radius: 10px;
+}
+
+.betalingsmetode-card3 {
+width: 350px;
+height: 60px;
+background-color: #FFF;
+box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+display: flex;
+align-items: center;
+margin-bottom: 30px;
+border-radius: 10px;
+
+}
+.betalingsmetode-card4 {
+width: 350px;
+height: 60px;
+background-color: #FFF;
+box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+display: flex;
+align-items: center;
+margin-bottom: 30px;
+border-radius: 10px;
+
+}
+
+
+
