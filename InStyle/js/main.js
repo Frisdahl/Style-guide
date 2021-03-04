@@ -372,6 +372,6 @@ function cancelOrderPopup() {
 }
 
 function cancelOrder() {
-    cancelPopup.innerHTML = '<div class="cancel-card"><h3>Din tid er nu afbestilt</h3><button class="full-width" onclick="cancelOrderPopup(); goToHome()">Tilbage</button></div>'
+    cancelPopup.innerHTML = '<div class="cancel-card"><h3>Din tid er nu afbestilt</h3><button class="full-width" onclick="goToHome(); cancelOrderPopup()">Tilbage</button></div>'
 }
 
