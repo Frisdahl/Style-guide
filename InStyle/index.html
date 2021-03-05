@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="da">
 
 <head>
     <title>InStyle</title>
 
     <link rel="stylesheet" href="css/main.css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <meta charset="utf-8">
 
@@ -36,7 +36,7 @@
 
 
 
-    <img id="header-logo" class="invisible" src="img/logo.png">
+    <img alt="" id="header-logo" class="invisible" src="img/logo.png">
 
 
 
@@ -47,19 +47,19 @@
     <nav id="navigation">
 
         <div id="nav-home" onclick="goToHome()" class="nav-link">
-            <img src="img/icon-home.png">
+            <img alt="" src="img/icon-home.png">
         </div>
 
         <div id="nav-appointments" onclick="goToMyAppointments()" class="nav-link">
-            <img src="img/icon-calendar.png">
+            <img alt="" src="img/icon-calendar.png">
         </div>
 
         <div id="nav-favorites" onclick="console.log('Favorites')" class="nav-link">
-            <img src="img/icon-star.png">
+            <img alt="" src="img/icon-star.png">
         </div>
 
         <div id="nav-profile" onclick="goToProfile()" class="nav-link">
-            <img src="img/icon-user.png">
+            <img alt="" src="img/icon-user.png">
         </div>
 
     </nav>
@@ -70,7 +70,7 @@
 
     <section id="load-in" class="active-section">
 
-        <img src="img/logo-tagline.png">
+        <img alt="" src="img/logo-tagline.png">
 
     </section>
 
@@ -105,14 +105,14 @@
 
     <section class="signup" id="signup-country">
 
-        <img class="backarrow" src="img/arrow-left.png" onclick="goToLogIn()">
+        <img alt="" class="backarrow" src="img/arrow-left.png" onclick="goToLogIn()">
 
         <h1>Velkommen til<br><span>InStyle</span></h1>
 
         <p>Bekræft din landskode<br>og indsæt dit telefon nummer</p>
 
         <input class="default" placeholder="Danmark">
-        <input class="default" placeholder="+0045" type="number" maxlength="8">
+        <input class="default" placeholder="+0045" type="number">
 
         <button onclick="goToSignUpVerification()">Næste</button>
 
@@ -127,17 +127,17 @@
 
     <section class="signup" id="signup-verification">
 
-        <img class="backarrow" src="img/arrow-left.png" onclick="goToSignUpCountry()">
+        <img alt="" class="backarrow" src="img/arrow-left.png" onclick="goToSignUpCountry()">
 
         <h1>Indtast din<br><span>verificeringskode</span></h1>
 
         <p>Bekræft din landskode<br>og indsæt dit telefon nummer</p>
 
         <div class="verification-container">
-            <input type="number" class="verification" maxlength="1" onkeyup="emulateTab1()">
-            <input type="number" class="verification" maxlength="1" onkeyup="emulateTab2()">
-            <input type="number" class="verification" maxlength="1" onkeyup="emulateTab3()">
-            <input type="number" class="verification" maxlength="1" onkeyup="emulateTab4()">
+            <input type="number" class="verification" onkeyup="emulateTab1()">
+            <input type="number" class="verification" onkeyup="emulateTab2()">
+            <input type="number" class="verification" onkeyup="emulateTab3()">
+            <input type="number" class="verification" onkeyup="emulateTab4()">
             <div id="verification-process"></div>
         </div>
 
@@ -151,7 +151,7 @@
 
     <section class="signup" id="signup-name">
 
-        <img class="backarrow" src="img/arrow-left.png" onclick="goToSignUpVerification()">
+        <img alt="" class="backarrow" src="img/arrow-left.png" onclick="goToSignUpVerification()">
 
         <h1>Opret din<br><span>personlige konto</span></h1>
 
@@ -171,9 +171,9 @@
 
     <section class="signup" id="signup-done">
 
-        <img class="backarrow" src="img/arrow-left.png" onclick="goToSignUpName()">
+        <img alt="" class="backarrow" src="img/arrow-left.png" onclick="goToSignUpName()">
 
-        <img class="profile-picture" src="img/user-icon.png">
+        <img alt="" class="profile-picture" src="img/user-icon.png">
 
         <h1>Hejsa<br><span id="signUpPrintUsername">NAVN</span></h1>
 
@@ -327,7 +327,7 @@
 
     <section id="giftcards">
 
-        <img class="backarrow" src="img/arrow-left.png" onclick="goToHome()">
+        <img alt="" class="backarrow" src="img/arrow-left.png" onclick="goToHome()">
 
         <h1>Mine<br><span>gavekort</span></h1>
 
@@ -335,7 +335,7 @@
             <div class="card-minegavekort">
 
                 <div class="card-img-minegavekort">
-                    <img src="img/giftcard-1.png">
+                    <img alt="" src="img/giftcard-1.png">
                 </div>
 
                 <h3 class="giftcard-h3">Frisør Elegance</h3>
@@ -383,11 +383,11 @@
 
     <section id="search">
 
-        <img class="backarrow" src="img/arrow-left.png" onclick="goToHome()">
+        <img alt="" class="backarrow" src="img/arrow-left.png" onclick="goToHome()">
 
         <input type="search" placeholder="Postnr. eller by" class="searchbar default" id="autocomplete-stormodtagerpostnumre-false" aria-autocomplete="list" autocomplete="on">
         <div class="searchbar-overlay">
-            <img src="img/icon-search.png">
+            <img alt="" src="img/icon-search.png">
         </div>
 
         <div id="search-results">
@@ -395,7 +395,7 @@
             <div class="card" onclick="goToCustomer1()">
 
                 <div class="card-img">
-                    <img src="img/hairdresser-1.png">
+                    <img alt="" src="img/hairdresser-1.png">
 
                     <div class="star-favorite-container">
                       <img src="img/star-inactive.png" alt="">
@@ -407,16 +407,16 @@
                 <div></div>
 
                 <div class="card-stars">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
                     <span>(121)</span>
                 </div>
 
                 <div class="card-distance">
-                    <img src="img/distance.png">
+                    <img alt="" src="img/distance.png">
                     <span>1,2 km</span>
                 </div>
 
@@ -440,7 +440,7 @@
             <div class="card">
 
                 <div class="card-img">
-                    <img src="img/egualz.jpg">
+                    <img alt="" src="img/egualz.jpg">
                 </div>
 
                 <h3>Frisør Egualz</h3>
@@ -448,16 +448,16 @@
                 <div></div>
 
                 <div class="card-stars">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
                     <span>(233)</span>
                 </div>
 
                 <div class="card-distance">
-                    <img src="img/distance.png">
+                    <img alt="" src="img/distance.png">
                     <span>0,2 km</span>
                 </div>
 
@@ -481,7 +481,7 @@
             <div class="card">
 
                 <div class="card-img">
-                    <img src="img/guldsaks.jpg">
+                    <img alt="" src="img/guldsaks.jpg">
                 </div>
 
                 <h3>Frisøren Guldsaks</h3>
@@ -489,16 +489,16 @@
                 <div></div>
 
                 <div class="card-stars">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
                     <span>(78)</span>
                 </div>
 
                 <div class="card-distance">
-                    <img src="img/distance.png">
+                    <img alt="" src="img/distance.png">
                     <span>1,5 km</span>
                 </div>
 
@@ -522,7 +522,7 @@
             <div class="card">
 
                 <div class="card-img">
-                    <img src="img/hemmo.jpg">
+                    <img alt="" src="img/hemmo.jpg">
                 </div>
 
                 <h3>Frisør Viggos</h3>
@@ -530,16 +530,16 @@
                 <div></div>
 
                 <div class="card-stars">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
                     <span>(275)</span>
                 </div>
 
                 <div class="card-distance">
-                    <img src="img/distance.png">
+                    <img alt="" src="img/distance.png">
                     <span>0,6 km</span>
                 </div>
 
@@ -574,17 +574,17 @@
 
     <section id="customer1" class="customer">
 
-        <img class="backarrow" src="img/arrow-left.png" onclick="goToSearch()">
+        <img alt="" class="backarrow" src="img/arrow-left.png" onclick="goToSearch()">
 
         <div class="customer-hero"></div>
 
         <h2>Frisør Pelino</h2>
         <div class="card-stars">
-            <img class="star" src="img/star-active.png">
-            <img class="star" src="img/star-active.png">
-            <img class="star" src="img/star-active.png">
-            <img class="star" src="img/star-active.png">
-            <img class="star" src="img/star-active.png">
+            <img alt="" class="star" src="img/star-active.png">
+            <img alt="" class="star" src="img/star-active.png">
+            <img alt="" class="star" src="img/star-active.png">
+            <img alt="" class="star" src="img/star-active.png">
+            <img alt="" class="star" src="img/star-active.png">
             <span>(121)</span>
         </div>
 
@@ -667,7 +667,7 @@
 
     <section id="date-select" class="customer">
 
-        <img class="backarrow" src="img/arrow-left.png" onclick="goToCustomer1()">
+        <img alt="" class="backarrow" src="img/arrow-left.png" onclick="goToCustomer1()">
 
         <div class="customer-hero"></div>
 
@@ -683,7 +683,7 @@
 
     <section id="time-select" class="customer">
 
-        <img class="backarrow" src="img/arrow-left.png" onclick="goToDateSelect()">
+        <img alt="" class="backarrow" src="img/arrow-left.png" onclick="goToDateSelect()">
 
         <div class="customer-hero"></div>
 
@@ -695,82 +695,82 @@
                 <label class="service-item" for="80">
                     <input class="checkbox" type="radio" id="80" name="timeselect" value="08:00">
                     <span>08:00</span>
-                    <img class="arrow" src="img/arrow-right.png">
+                    <img alt="" class="arrow" src="img/arrow-right.png">
                 </label>
                 <label class="service-item" for="83">
                     <input class="checkbox" type="radio" id="83" name="timeselect" value="08:30">
                     <span>08:30</span>
-                    <img class="arrow" src="img/arrow-right.png">
+                    <img alt="" class="arrow" src="img/arrow-right.png">
                 </label>
                 <label class="service-item" for="90">
                     <input class="checkbox" type="radio" id="90" name="timeselect" value="09:00">
                     <span>09:00</span>
-                    <img class="arrow" src="img/arrow-right.png">
+                    <img alt="" class="arrow" src="img/arrow-right.png">
                 </label>
                 <label class="service-item" for="93">
                     <input class="checkbox" type="radio" id="93" name="timeselect" value="09:30">
                     <span>09:30</span>
-                    <img class="arrow" src="img/arrow-right.png">
+                    <img alt="" class="arrow" src="img/arrow-right.png">
                 </label>
                 <label class="service-item" for="100">
                     <input class="checkbox" type="radio" id="100" name="timeselect" value="10:00">
                     <span>10:00</span>
-                    <img class="arrow" src="img/arrow-right.png">
+                    <img alt="" class="arrow" src="img/arrow-right.png">
                 </label>
                 <label class="service-item" for="103">
                     <input class="checkbox" type="radio" id="103" name="timeselect" value="10:30">
                     <span>10:30</span>
-                    <img class="arrow" src="img/arrow-right.png">
+                    <img alt="" class="arrow" src="img/arrow-right.png">
                 </label>
                 <label class="service-item" for="110">
                     <input class="checkbox" type="radio" id="110" name="timeselect" value="11:00">
                     <span>11:00</span>
-                    <img class="arrow" src="img/arrow-right.png">
+                    <img alt="" class="arrow" src="img/arrow-right.png">
                 </label>
                 <label class="service-item" for="113">
                     <input class="checkbox" type="radio" id="113" name="timeselect" value="11:30">
                     <span>11:30</span>
-                    <img class="arrow" src="img/arrow-right.png">
+                    <img alt="" class="arrow" src="img/arrow-right.png">
                 </label>
                 <label class="service-item" for="120">
                     <input class="checkbox" type="radio" id="120" name="timeselect" value="12:00">
                     <span>12:00</span>
-                    <img class="arrow" src="img/arrow-right.png">
+                    <img alt="" class="arrow" src="img/arrow-right.png">
                 </label>
                 <label class="service-item" for="123">
                     <input class="checkbox" type="radio" id="123" name="timeselect" value="12:30">
                     <span>12:30</span>
-                    <img class="arrow" src="img/arrow-right.png">
+                    <img alt="" class="arrow" src="img/arrow-right.png">
                 </label>
                 <label class="service-item" for="130">
                     <input class="checkbox" type="radio" id="130" name="timeselect" value="13:00">
                     <span>13:00</span>
-                    <img class="arrow" src="img/arrow-right.png">
+                    <img alt="" class="arrow" src="img/arrow-right.png">
                 </label>
                 <label class="service-item" for="133">
                     <input class="checkbox" type="radio" id="133" name="timeselect" value="13:30">
                     <span>13:30</span>
-                    <img class="arrow" src="img/arrow-right.png">
+                    <img alt="" class="arrow" src="img/arrow-right.png">
                 </label>
                 <label class="service-item" for="140">
                     <input class="checkbox" type="radio" id="140" name="timeselect" value="14:00">
                     <span>14:00</span>
-                    <img class="arrow" src="img/arrow-right.png">
+                    <img alt="" class="arrow" src="img/arrow-right.png">
                 </label>
                 <label class="service-item" for="143">
                     <input class="checkbox" type="radio" id="143" name="timeselect" value="14:30">
                     <span>14:30</span>
-                    <img class="arrow" src="img/arrow-right.png">
+                    <img alt="" class="arrow" src="img/arrow-right.png">
                 </label>
                 <label class="service-item" for="150">
                     <input class="checkbox" type="radio" id="150" name="timeselect" value="15:00">
                     <span>15:00</span>
-                    <img class="arrow" src="img/arrow-right.png">
+                    <img alt="" class="arrow" src="img/arrow-right.png">
                 </label>
                 <label class="service-item" for="153">
                     <input class="checkbox" type="radio" id="153" name="timeselect" value="15:30">
                     <span>15:30</span>
-                    <img class="arrow" src="img/arrow-right.png">
+                    <img alt="" class="arrow" src="img/arrow-right.png">
                 </label>
             </div>
 
@@ -799,10 +799,10 @@
 
     <section id="order-receipt" class="darksection">
 
-        <img class="backarrow" src="img/arrow-left-white.png" onclick="goToHome()">
+        <img alt="" class="backarrow" src="img/arrow-left-white.png" onclick="goToHome()">
 
         <div class="customer-name">
-            <img class="bekraeftet-icon" src="img/bekraeftet.png">
+            <img alt="" class="bekraeftet-icon" src="img/bekraeftet.png">
 
             <h3>Frisør Pelino</h3>
             <p>Lundsbjergvej 56,<br>Frederiksberg C 1916</p>
@@ -815,16 +815,16 @@
 
             <a target="_blank" href="https://www.google.com/maps/place/Lupinvej+56,+5210+Odense/@55.4119975,10.3328284,15z/data=!3m1!4b1!4m5!3m4!1s0x464ce078de78555f:0x6c5190ca23122674!8m2!3d55.4119978!4d10.3415617">
                 <div class="reciept-button">
-                    <img src="img/location.svg">
+                    <img alt="" src="img/location.svg">
                 </div>
             </a>
 
             <div class="reciept-button" onclick="goToMyAppointments()">
-                <img src="img/calendar.svg">
+                <img alt="" src="img/calendar.svg">
             </div>
 
             <div class="reciept-button cancel" onclick="cancelOrderPopup()">
-                <img src="img/cancel.svg">
+                <img alt="" src="img/cancel.svg">
             </div>
 
         </div>
@@ -883,7 +883,7 @@
 
     <section id="profile-page">
 
-        <img class="backarrow" src="img/arrow-left.png" onclick="goToHome()">
+        <img alt="" class="backarrow" src="img/arrow-left.png" onclick="goToHome()">
 
 
         <div class="edit-profile-container">
@@ -962,7 +962,7 @@
 
     <section id="my-appointments">
 
-        <img class="backarrow" src="img/arrow-left.png" onclick="goToHome()">
+        <img alt="" class="backarrow" src="img/arrow-left.png" onclick="goToHome()">
 
 
         <div class="pagewrapper">
@@ -972,7 +972,7 @@
             <div class="card-mineaftaler">
 
                 <div class="card-img-mineaftaler">
-                    <img src="img/hairdresser-1.png">
+                    <img alt="" src="img/hairdresser-1.png">
                 </div>
 
                 <h3>Frisør Egualz</h3>
@@ -980,16 +980,16 @@
                 <div></div>
 
                 <div class="card-stars-mineaftaler">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
-                    <img class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
+                    <img alt="" class="star" src="img/star-active.png">
                     <span>(233)</span>
                 </div>
 
                 <div class="card-distance-mineaftaler">
-                    <img src="img/distance.png">
+                    <img alt="" src="img/distance.png">
                     <span>0,2 km</span>
                 </div>
 
@@ -1024,7 +1024,7 @@
 
     <section id="my-points">
 
-        <img class="backarrow" src="img/arrow-left.png" onclick="goToHome()">
+        <img alt="" class="backarrow" src="img/arrow-left.png" onclick="goToHome()">
 
         <div class="point-box-container-center">
             <div class="point-box-container">
@@ -1050,7 +1050,7 @@
     <div class="card-point">
       <h1 class="point-text-card-canceled">-15 pt</h1>
       <p class="card-booking-status-canceled">Ikke afholdt</p>
-      <img class="aflyst-icon"src="img/cancel-point-card.svg" alt="Aflyst">
+      <img class="aflyst-icon" src="img/cancel-point-card.svg" alt="Aflyst">
       <p class="frisør-name-canceled">Frisør Egualz</p>
 
     </div>
@@ -1059,7 +1059,7 @@
     <div class="card-point">
       <h1 class="point-text-card">10 pt</h1>
       <p class="card-booking-status">Klipning</p>
-      <img class="bekræftet-icon"src="img/check-point-card.svg" alt="Aflyst">
+      <img class="bekræftet-icon" src="img/check-point-card.svg" alt="Aflyst">
       <p class="frisør-name">Frisør: Hemo</p>
 
     </div>
@@ -1068,7 +1068,7 @@
     <div class="card-point">
       <h1 class="point-text-card">20 pt</h1>
       <p class="card-booking-status">Klipning + Produkt</p>
-      <img class="bekræftet-icon"src="img/check-point-card.svg" alt="Aflyst">
+      <img class="bekræftet-icon" src="img/check-point-card.svg" alt="Aflyst">
       <p class="frisør-name">Frisør: Guldsaks</p>
 
     </div>
@@ -1090,7 +1090,7 @@
 
     <section id="faq">
 
-        <img class="backarrow" src="img/arrow-left.png" onclick="goToProfile()">
+        <img alt="" class="backarrow" src="img/arrow-left.png" onclick="goToProfile()">
 
         <h2 class="faq-h2-text">Frequently Asked Questions</h2>
         <details open>
@@ -1120,7 +1120,7 @@
 
     <section id="betalings-metoder">
 
-        <img class="backarrow" src="img/arrow-left.png" onclick="goToProfile()">
+        <img alt="" class="backarrow" src="img/arrow-left.png" onclick="goToProfile()">
 
 
         <div class="pagewrapper-betalingsmetoder">
@@ -1149,12 +1149,11 @@
             </div>
         </div>
 
-
     </section>
 
 
-
+        <script src="js/main.js"></script>
 
 </body>
 
-<script src="js/main.js"></script></html>
+</html>
